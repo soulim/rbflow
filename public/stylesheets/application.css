@@ -1,0 +1,216 @@
+@import url(reset.css);
+@import url(960gs.css);
+@import url(form.css);
+@import url(icon.css);
+
+/* Page
+----------------------------------------------------------------------------------------------------*/
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size:14px;
+  line-height:21px;
+  color:#444;
+}
+h1,
+article header {
+  margin-bottom:1em;
+  padding-bottom:1em;
+  border-bottom:#EEE 1px solid;
+  font-size:22px;
+  font-weight:bold;
+}
+h2 {
+  font-size:14px;  
+  font-weight:bold;
+  margin-bottom:1em;
+}
+article header a{
+  color:#444;
+  text-decoration:none;  
+}
+pre,
+code {
+  margin:0;
+  padding:1em;
+  border-radius:5px;
+  background-color:#2E2E2E;
+  color:#FFF;
+}
+p,
+pre,
+ul,
+ol {
+  margin-bottom:1em;
+}
+ul {
+  padding-left:1em;
+}
+ul li {
+  list-style:disc outside none;
+}
+article header a:hover,
+a {
+  color:#758EA2;
+}
+#header {
+  padding:20px 0;
+}
+/* http://www.colourlovers.com/palette/1388735/Diversion_II */
+.logo {
+  font-size:22px;
+  font-weight:bold;
+}
+.logo span {
+  border-radius:5px;
+  margin-left:2px;
+  padding:1px 4px;
+  background-color:#CF3C25;
+  -background-color:#C1DE4B;
+  color:#FFF;
+  text-shadow:0 1px 1px rgba(0, 0, 0, 0.3);
+}
+.search {}
+.search input[type="search"] {
+  width:100%;
+  margin:0;
+  padding:0;
+}
+.menu {
+  text-align:right;
+  font-size:12px;
+  -line-height:24px;
+}
+.menu nav ul {
+  padding-top:1px;
+} 
+.menu nav ul li {
+  display:inline;
+} 
+.menu nav a {
+  display:inline-block;
+  margin:0;
+  padding:4px 9px;
+  line-height:1;
+  text-decoration:none;
+  border-radius:10px;
+}
+.menu nav a:hover {
+  color:#FFF;
+  background-color:#CF3C25;  
+}
+
+.rubyjobs {
+  margin-bottom:2em;
+  padding:12px 0;
+  border-radius:5px;
+  background-color:#F1F5E1;
+  font-size:12px;
+  line-height:1;
+}
+.rubyjobs a {
+  color:#444;
+}
+.rubyjobs header {
+  font-size:16px;
+  font-weight:bold;
+}
+.rubyjobs header div {
+  padding-top:6px;
+  font-size:12px;
+}
+.rubyjobs header div a {
+  text-decoration:none;
+}
+.rubyjobs header div a span {
+  border-radius:2px;
+  padding:1px;
+  background-color:#C1DE4B;
+  color:#FFF;
+  text-shadow:0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+#content {
+  margin-top:12px;
+  margin-bottom:100px;
+}
+.day {}
+.day .date-day, .date-month, .date-year {
+  color:#B2B2B2;
+  font-weight:bold;
+  line-height:1;
+}
+.day .date-day {
+  font-size:22px;
+}
+.day .date-month {
+  font-size:14px;  
+}
+.day .date-year {
+  display:block;
+  font-size:12px;
+}
+article {
+  position:relative;
+  margin-bottom:2em;
+}
+article aside {
+  position:absolute;
+  top:0;
+  right:0;
+  display:none;
+}
+article:hover aside {
+  display:block;  
+}
+article aside ul li {
+  margin:0 0 2px 0;
+  padding:0;
+  list-style:none outside none;
+  line-height:1;
+}
+
+article .comments {
+  font-style:italic;
+}
+article .comments header {
+  margin:0;
+  padding:0;
+  border:none;
+  font-size:14px;
+}
+article .comments header a {
+  color:#444;
+  text-decoration:underline;
+}
+
+#footer {
+  position:fixed;
+  bottom:0;
+  width:100%;
+  padding-top:12px;
+  padding-bottom:12px;
+  background-image:-webkit-gradient(
+    linear, left top, left bottom,
+    from(rgba(255,255,255, 0.5)),
+    to(rgba(255,255,255,1))
+  );
+  background-image:-moz-linear-gradient(
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 1) 95%
+  );
+  -color:#444;
+  font-size:11px;
+}
+#footer a {
+  color:#444;
+}
+#footer p {
+  margin-bottom:10px;
+  line-height:14px;
+}
+#footer a span {
+  padding:1px 3px;
+  border-radius:2px;
+  color:#fff;
+  background-color:#758EA2;
+}

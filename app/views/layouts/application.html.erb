@@ -1,14 +1,43 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Rbflow</title>
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
-  <%= csrf_meta_tag %>
-</head>
-<body>
-
-<%= yield %>
-
-</body>
+<html lang="<%= I18n.locale -%>">
+  <head>
+    <meta charset="utf-8" />
+    <%= stylesheet_link_tag "application", "form", :cache => true %>
+    <%= csrf_meta_tag %>
+    <title><%= "#{yield(:title)} &mdash; ".html_safe unless yield(:title).blank? -%><%= t('.title') -%></title>
+  </head>
+  <body>
+    <section id="flash" class="flash" style="display:none;"><%= flash_messages %></section>
+    <header id="header" class="container_12 clearfix">
+      <section class="logo grid_2">Ruby<span>Flow</span></section>
+      <section class="menu grid_8">
+        <nav>
+          <ul>
+            <li><%= link_to t(".new_post") %></li>
+            <li><%= link_to t(".new_account") %></li>
+          </ul>
+        </nav>          
+      </section>
+      <section class="search form grid_2"><input type="search" name="q" placeholder="Поиск" /></section>
+    </header>    
+    <section id="content" class="content container_12 clearfix">
+      <%= yield %>
+    </section>
+    <footer id="footer">
+      <section class="container_12 clearfix">
+        <section class="grid_2">
+          <p>&copy;&nbsp;2008—2010, <a href="http://soulim.com">Alex Soulim</a></p>
+          <p>При поддержке хостинг-провайдера <a href="http://locum.ru"><span>locum.ru</span></a></p>
+        </section>
+        <section class="grid_8">
+          &nbsp;
+        </section>
+        <section class="grid_2">
+          &nbsp;
+        </section>
+      </section>
+    </footer>
+    <%= javascript_include_tag :defaults, :cache => true %>
+    <%= yield(:footer_js) %>
+  </body>
 </html>

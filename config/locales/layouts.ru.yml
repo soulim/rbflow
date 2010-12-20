@@ -1,0 +1,7 @@
+ru:
+  layouts:
+    application:
+      title: "Новости о Ruby, отобранные сообществом разработчиков. Версия rubyflow.com на русском языке."
+      description: ""
+      new_post: "Добавить статью"
+      new_account: "Аккаунт"

@@ -1,0 +1,127 @@
+/* ------------------------------------------------------------------------
+   = Forms
+   ------------------------------------------------------------------------ */
+.form {
+  position:relative;
+  margin:0;
+  padding:0;
+}
+.form label {
+	display:inline-block;
+	width:100px;
+	font-weight:bold;
+}
+.form div {
+	margin-bottom:1em;
+}
+.form div.indented {
+	padding-left:104px;
+}
+.form .field_with_errors {
+	display:inline;
+}
+.form .field_with_errors label {
+	color:#B00;
+}
+.form .field_with_errors input,
+.form .field_with_errors textarea {
+	border:#B00 1px solid;
+}
+
+input[type="password"], input[type="text"], textarea {
+  margin:0;
+  padding:6px 8px 6px;
+  -webkit-border-radius:4px;
+  -moz-border-radius:4px;
+  border-radius:4px;
+  border:1px solid #999;
+  font-size:12px;
+  color:inherit;
+}
+
+/* Buttons */
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="image"]::-moz-focus-inner,
+button::-moz-focus-inner,
+.button::-moz-focus-inner,
+.button.small::-moz-focus-inner {
+  border:0;
+}
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="image"],
+button,
+.button,
+.button.small {
+	display:inline-block;
+  color:inherit;
+  border:1px solid #999;
+  margin:0;
+  overflow:visible;
+  background:-webkit-gradient(linear, left top, left bottom, from(#fff), to(#e9e9e9));
+  background:-moz-linear-gradient(top,  #fff,  #e9e9e9);
+  text-decoration:none;
+}
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="image"],
+button,
+.button {
+  padding:6px 8px 6px;
+  font-size:12px;
+  font-weight:bold;
+  -webkit-border-radius:4px;
+  -moz-border-radius:4px;
+  border-radius:4px;
+}
+.button.small {
+  padding:2px 4px;
+  font-size:11px;
+  font-weight:normal;
+  -webkit-border-radius:3px;
+  -moz-border-radius:3px;
+  border-radius:3px;
+}
+input[type="button"]:disabled,
+input[type="submit"]:disabled,
+input[type="reset"]:disabled,
+input[type="image"]:disabled,
+button:disabled,
+.button:disabled,
+.button.small:disabled {
+  opacity:.5;
+  cursor:default !important;
+}
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="image"]:hover,
+button:hover,
+.button:hover,
+.button.small:hover {
+  cursor:pointer;
+  border:1px solid #555;
+}
+a.button:hover {
+  background-color:transparent;
+  color:inherit;
+}
+input[type="button"]:active,
+input[type="button"].active,
+input[type="submit"]:active,
+input[type="reset"]:active,
+input[type="image"]:active,
+button:active,
+.button:active,
+.button.active,
+.button.small:active {
+  background:-webkit-gradient(linear, left top, left bottom, from(#AAA), to(#FFF));
+  background:-moz-linear-gradient(top,  #AAA,  #FFF);
+  -color:#fff;
+  border:1px solid #555;
+  -text-shadow:0 1px 0 #666;
+}

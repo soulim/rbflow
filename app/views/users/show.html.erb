@@ -1,0 +1,27 @@
+<section class="grid_2">
+  <h1><%= t(".title") %></h1>
+</section>
+<section class="grid_1">
+  <%= image_tag avatar_url(@user), :size => "48x48", :alt => @user.name, :class => "avatar" %>
+</section>
+<section class="grid_7">
+  <article>
+    <header><%= @user.name %></header>
+    <p><%= t("activerecord.attributes.user.email") %>: <%= auto_link @user.email %></p>
+    <h2><%= t(".used_providers") %>:</h2>
+    <ul>
+      <% for authentication in @user.authentications %>
+      <li><%= authentication.provider_name %></li>
+      <% end %>
+    </ul>
+    <h2><%= t(".all_providers") %>:</h2>
+    <ul class="providers inline">
+      <li><%= link_to "#{image_tag("openid_64.png", :size => "64x64")} OpenID".html_safe, "/auth/open_id" %></li>
+      <li><%= link_to "#{image_tag("github_64.png", :size => "64x64")} GitHub".html_safe, "/auth/github" %></li>
+      <li><%= link_to "#{image_tag("twitter_64.png", :size => "64x64")} Twitter".html_safe, "/auth/twitter" %></li>
+    </ul>
+  </article>
+</section>
+<section class="grid_2">
+  <%= link_to t("layouts.application.sign_out"), sign_out_url %>
+</section>

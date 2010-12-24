@@ -1,10 +1,10 @@
 @import url(reset.css);
 @import url(960gs.css);
 @import url(form.css);
-@import url(icon.css);
 
-/* Page
-----------------------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------
+   = Page
+   ------------------------------------------------------------------------ */
 body {
   font-family: Helvetica, Arial, sans-serif;
   font-size:14px;
@@ -19,6 +19,11 @@ article header {
   font-size:22px;
   font-weight:bold;
 }
+h1 {
+  margin-bottom:1em;
+  padding:0;
+  border:none;  
+}
 h2 {
   font-size:14px;  
   font-weight:bold;
@@ -31,10 +36,11 @@ article header a{
 pre,
 code {
   margin:0;
-  padding:1em;
+  padding:0.5em 1em;
   border-radius:5px;
   background-color:#2E2E2E;
   color:#FFF;
+  font-family:Consolas, Menlo, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', monospace, serif;
 }
 p,
 pre,
@@ -48,19 +54,73 @@ ul {
 ul li {
   list-style:disc outside none;
 }
+ul.providers {
+  padding:0;
+  font-weight:bold;
+}
+ul.providers li {
+  list-style:none outside none;
+}
+ul.providers a {
+  text-decoration:none;
+}
+ul.providers img {
+  vertical-align:middle;
+}
+
+ul.providers.inline li {
+  display:inline-block;
+  width:90px;
+  text-align:center;
+}
+ul.providers.inline img {
+  display:block;
+  margin:0 auto;
+}
+
+
 article header a:hover,
 a {
   color:#758EA2;
 }
+/* ------------------------------------------------------------------------
+   = Flash message
+   ------------------------------------------------------------------------ */
+.flash {
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	z-index: 10000;
+	border-bottom:2px solid rgba(0, 0, 0, 0.05);
+	background-color:rgba(46, 46, 46, 0.95);
+}
+.flash .notice,
+.flash .error {
+	margin:0 7%;
+	padding:15px;
+	font-size:14px;
+	font-weight:bold;
+	text-align:center;
+	color:#FFF;
+}
+.flash .error { color:#CF3C25; }
+
 #header {
-  padding:20px 0;
+  position:relative;
+  padding:24px 0;
 }
 /* http://www.colourlovers.com/palette/1388735/Diversion_II */
-.logo {
+#header .logo {
+  color:#000;
   font-size:22px;
   font-weight:bold;
 }
-.logo span {
+#header .logo a {
+  text-decoration:none;
+  color:#000;
+}
+#header .logo span {
   border-radius:5px;
   margin-left:2px;
   padding:1px 4px;
@@ -69,24 +129,45 @@ a {
   color:#FFF;
   text-shadow:0 1px 1px rgba(0, 0, 0, 0.3);
 }
-.search {}
-.search input[type="search"] {
-  width:100%;
-  margin:0;
-  padding:0;
-}
-.menu {
+#header .search {
   text-align:right;
+}
+#header .account {
+  position:absolute;
+  right:20px;
+  top:0;
+  padding:4px 8px;
+  -webkit-border-bottom-right-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -moz-border-radius-bottomright: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background-color:#758EA2;
+  font-size:11px;
+  line-height:1;
+}
+#header .account a {
+  color:#FFF;
+  text-decoration:none;
+}
+#header .account a:hover {
+}
+
+#header .menu {
+  text-align:right;
+  text-transform:uppercase;
   font-size:12px;
+  font-weight:bold;
   -line-height:24px;
 }
-.menu nav ul {
+#header .menu nav ul {
   padding-top:1px;
 } 
-.menu nav ul li {
+#header .menu nav ul li {
   display:inline;
 } 
-.menu nav a {
+#header .menu nav a {
   display:inline-block;
   margin:0;
   padding:4px 9px;
@@ -94,39 +175,9 @@ a {
   text-decoration:none;
   border-radius:10px;
 }
-.menu nav a:hover {
+#header .menu nav a:hover {
   color:#FFF;
   background-color:#CF3C25;  
-}
-
-.rubyjobs {
-  margin-bottom:2em;
-  padding:12px 0;
-  border-radius:5px;
-  background-color:#F1F5E1;
-  font-size:12px;
-  line-height:1;
-}
-.rubyjobs a {
-  color:#444;
-}
-.rubyjobs header {
-  font-size:16px;
-  font-weight:bold;
-}
-.rubyjobs header div {
-  padding-top:6px;
-  font-size:12px;
-}
-.rubyjobs header div a {
-  text-decoration:none;
-}
-.rubyjobs header div a span {
-  border-radius:2px;
-  padding:1px;
-  background-color:#C1DE4B;
-  color:#FFF;
-  text-shadow:0 1px 1px rgba(0, 0, 0, 0.3);
 }
 
 #content {
@@ -181,6 +232,26 @@ article .comments header {
 article .comments header a {
   color:#444;
   text-decoration:underline;
+}
+
+.avatar {
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  border-radius:5px;
+}
+
+.users {}
+.users tr {
+  margin:0;
+  padding:0;
+  border-bottom:#758EA2 1px solid;
+}
+.users tr:hover {
+  background-color:rgba(243, 246, 250, 1);
+}
+.users td {
+  margin:0;
+  padding:3px;  
 }
 
 #footer {

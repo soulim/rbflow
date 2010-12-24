@@ -1,5 +1,8 @@
 .bundle
+.DS_Store
 db/*.sqlite3
+db/schema.rb
 log/*.log
 tmp/**/*
 config/database.yml
+config/omniauth.yml

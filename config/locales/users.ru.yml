@@ -1,0 +1,14 @@
+ru:
+  users:
+    index:
+      title: "Авторы"
+      approve: "Доверять"
+      unapprove: "Не доверять"
+      destroy: "Удалить"
+    show:
+      title: "Аккаунт"
+      used_providers: "Для аутентификации уже используются"
+      all_providers: "Можно добавить еще"
+      sidebar:
+        about: "Информация"
+        items: "Статьи"

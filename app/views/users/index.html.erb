@@ -1,0 +1,20 @@
+<section class="grid_2">
+  <h1><%= t(".title") %></h1>
+</section>
+<section class="grid_10">
+  <table width="100%" class="users">
+  <% for user in @users %>
+    <tr>
+      <td width="10%" style="text-align:center"><%= image_tag avatar_url(user), :size => "48x48", :alt => user.name, :class => "avatar" %></td>
+      <td width="60%">
+        <%= user.name %><br />
+        <%= auto_link user.email %>
+      </td>
+      <td width="30%" style="text-align:right">
+        <%= (user.approved?) ? link_to(t(".unapprove"), unapprove_user_url(user), :method => :put, :class => "small button") : link_to(t(".approve"), approve_user_url(user), :method => :put, :class => "small button") %>
+        <%= link_to t(".destroy"), user, :method => :delete, :confirm => t("layouts.commons.destroy_confirmation", :subject => user.name), :class => "small button" %>
+      </td>
+    </tr>
+  <% end %>
+  </table>
+</section>

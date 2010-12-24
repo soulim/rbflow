@@ -1,7 +1,14 @@
 ru:
   layouts:
+    must_be_signed_in: "Сначала нужно авторизоваться!"
+    must_be_admin: "Неа! Вход только для админов ;)"
     application:
       title: "Новости о Ruby, отобранные сообществом разработчиков. Версия rubyflow.com на русском языке."
       description: ""
       new_post: "Добавить статью"
-      new_account: "Аккаунт"
+      vacancies: "Вакансии"
+      account: "Аккаунт"
+      sign_in: "Вход"
+      sign_out: "Выход"
+    commons:
+      destroy_confirmation: "Действительно удалить '%{subject}'?"

@@ -1,9 +1,7 @@
 require 'spec_helper'
 
 describe User do
-  subject { Factory(:user) }
-  
-  it { should have_many(:authentications) }
+  subject { Factory.build(:user) }
   
   describe ".create_with_omniauth!" do
     let(:auth) do
@@ -30,6 +28,25 @@ describe User do
     end
   end
   
+  User::ROLES.each_key do |role|
+    describe "##{role}?" do
+      context "when a user has role '#{role}'" do
+        before(:each) { subject.role = User::ROLES[role] }
+
+        it "returns true" do
+          subject.send("#{role}?").should be_true
+        end
+      end
+      context "when a user does not have role 'admin'" do
+        before(:each) { subject.role = nil }
+
+        it "returns false" do
+          subject.send("#{role}?").should be_false
+        end
+      end
+    end
+  end
+  
   describe "#approved?" do
     context "when user is approved" do
       before(:each) { subject.update_attributes!(:approved_at => Time.now) }
@@ -46,7 +63,7 @@ describe User do
   end
   
   describe "#approve!" do
-    it "should set approved status" do
+    it "sets approved status" do
       subject.approve!
       subject.should be_approved
     end
@@ -55,9 +72,39 @@ describe User do
   describe "#unapprove!" do
     before(:each) { subject.update_attributes!(:approved_at => Time.now) }
     
-    it "should drop approved status" do
+    it "drops approved status" do
       subject.unapprove!
       subject.should_not be_approved
     end
   end
+  
+  describe "#guest?" do
+    context "when a user has not been saved" do
+      it "returns true" do
+        subject.guest?.should be_true
+      end
+    end
+    context "when a user has been saved" do
+      before(:each) { subject.save! }
+      
+      it "returns false" do
+        subject.guest?.should be_false
+      end
+    end
+  end
+
+  describe "#me?" do
+    before(:each) { subject.save! }
+    
+    context "when given user is the same person" do
+      it "returns true" do
+        subject.me?(subject).should be_true
+      end
+    end
+    context "when given user is not the same person" do
+      it "returns false" do
+        subject.me?(Factory(:user)).should be_false
+      end
+    end
+  end  
 end

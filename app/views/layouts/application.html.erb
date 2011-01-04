@@ -2,8 +2,11 @@
 <html lang="<%= I18n.locale -%>">
   <head>
     <meta charset="utf-8" />
+    <meta name="description" content="<%= yield(:meta_description).blank? ? t(".meta_description") : yield(:meta_description) %>" />
+    <meta name="keywords" content="<%= yield(:meta_keywords).blank? ? t(".meta_keywords") : yield(:meta_keywords) %>" />
+    <meta name="author" content="<%= yield(:meta_author).blank? ? t(".meta_author") : yield(:meta_author) %>" />
     <link rel="shortcut icon" href="/favicon.ico" />
-    <%= stylesheet_link_tag "application", "form", :cache => true %>
+    <%= stylesheet_link_tag "reset", "application", "960gs", "form", "wmd", "code", :cache => true %>
     <%= csrf_meta_tag %>
     <title><%= "#{yield(:title)} &mdash; ".html_safe unless yield(:title).blank? -%><%= t('.title') -%></title>
   </head>
@@ -14,14 +17,14 @@
       <section class="menu grid_8">
         <nav>
           <ul>
-            <li><%= link_to t(".new_post") %></li>
+            <li><%= link_to t(".new_item"), new_item_url %></li>
             <li><%= link_to t(".vacancies"), "http://rubyjobs.ru" %></li>
           </ul>
         </nav>          
       </section>
       <section class="search form grid_2"><input type="search" name="q" placeholder="Поиск" results="5" /></section>
       <section class="account">
-        <%= signed_in? ? link_to(t(".account"), user_url(:current)) : link_to(t(".sign_in"), sign_in_url) %>
+        <%= signed_in? ? link_to(t(".account"), user_url(current_user)) : link_to(t(".sign_in"), sign_in_url) %>
       </section>
     </header>    
     <section id="content" class="content container_12 clearfix">
@@ -41,7 +44,11 @@
         </section>
       </section>
     </footer>
-    <%= javascript_include_tag :defaults, "jquery.flash", :cache => true %>
+    <%= javascript_include_tag :defaults, "jquery.flash", "highlight.pack", :cache => true %>
+    <%= javascript_include_tag "http://static.evernote.com/noteit.js", :cache => false %>
+    <script type="text/javascript">
+      $('pre code').each(function(i, e) { hljs.highlightBlock(e, '    ')});
+    </script>
     <%= yield(:footer_js) %>
   </body>
 </html>

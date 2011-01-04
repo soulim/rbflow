@@ -1,0 +1,31 @@
+<% content_for :title, @item.title %>
+<% content_for :meta_description, @item.title %>
+<% content_for :meta_author, @item.user.name %>
+
+
+<section class="grid_2 day">
+  <time datetime="<%= @item.created_at.to_s(:db) %>" pubdate="pubdate">
+    <span class="date-day"><%= @item.created_at.strftime("%d") %></span><span class="date-month">.<%= @item.created_at.strftime("%m") %></span> <span class="date-year"><%= @item.created_at.strftime("%Y") %></span>
+</time>
+</section>
+<section class="grid_8">
+  <article>
+    <header>
+      <%= @item.title %><span><%= @item.user.name %></span>
+    </header>
+    <aside>
+      <ul>
+        <li><a href="#" onclick="Evernote.doClip({styling:'none',suggestNotebook:'rubyflow.ru',providerName:'rubyflow.ru',contentId:'entry-1029-content',url:'http://rubyflow.ru/items/1029',title:'Трюки с Hash'}); return false;"><img src="http://static.evernote.com/site-mem-16.png" alt="Сохранить в Evernote" style="vertical-align:bottom"></a></li>
+      </ul>
+    </aside>
+    <%= @item.html.html_safe %>
+    
+    <section class="comments clearfix">
+      <header class="grid_2"><a href="">Комментарии</a></header>
+      <section class="grid_6">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a est nisl. Proin molestie nisl diam, nec laoreet massa. Duis nisl est, malesuada et varius at, placerat et ante. Ut eu lorem in neque rhoncus accumsan. Curabitur varius nisl at tellus accumsan mattis. Cras est lorem, egestas id ornare iaculis, interdum commodo tortor. Vestibulum tempus tortor sit amet dui adipiscing sagittis. Vivamus semper tristique urna, vel posuere magna vehicula vel.
+      </section>
+    </section>
+  </article>
+
+</section>

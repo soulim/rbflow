@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
   ROLES.each_pair {|role, code| define_method("#{role}?") { self.role == code } }
   
   has_many :authentications, :dependent => :destroy
+  has_many :items, :dependent => :nullify
   
   def self.create_with_omniauth!(auth)
     self.create! do |user|
@@ -27,5 +28,13 @@ class User < ActiveRecord::Base
   def unapprove!
     self.update_attributes(:approved_at => nil)
     self
+  end
+  
+  def guest?
+    self.new_record?
+  end
+  
+  def me?(user)
+    self.id == user.id
   end
 end

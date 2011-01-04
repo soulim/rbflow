@@ -1,0 +1,14 @@
+<% content_for :title, t(".title") %>
+
+<section class="grid_6 preview">
+  <%= render :partial => "preview", :locals => { :item => @item } %>
+</section>
+<section class="grid_6 form">
+  <%= form_for @item do |f| %>
+    <%= render :partial => "form", :locals => { :f => f } %>
+    <div class="buttons">
+      <%= f.submit t(".create") %> <%= link_to t(".cancel"), :back %>
+    </div>
+  <% end %>
+</section>
+

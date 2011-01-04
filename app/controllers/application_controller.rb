@@ -18,19 +18,6 @@ class ApplicationController < ActionController::Base
     session[:user_id] = user.id
   end
   
-  def require_user
-    if !signed_in?
-      store_location
-      redirect_to sign_in_path, :notice => t("layouts.must_be_signed_in")
-    end
-  end
-
-  def require_admin
-    if !signed_in? || !current_user.admin?
-      redirect_to sign_in_path, :notice => t("layouts.must_be_admin")
-    end
-  end
-
   def store_location
     session[:return_to] = request.fullpath
   end
@@ -42,5 +29,10 @@ class ApplicationController < ActionController::Base
   
   def back_or_default_path(default)
     session[:return_to] || default
+  end
+  
+  rescue_from CanCan::AccessDenied do |exception|
+    store_location
+    redirect_to sign_in_path, :notice => exception.message
   end
 end

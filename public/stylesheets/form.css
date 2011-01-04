@@ -27,6 +27,12 @@
 .form .field_with_errors textarea {
 	border:#B00 1px solid;
 }
+.form .buttons {
+  
+}
+.form .buttons a {
+  font-size:12px;
+}
 
 input[type="password"], input[type="text"], textarea {
   margin:0;
@@ -124,4 +130,19 @@ button:active,
   -color:#fff;
   border:1px solid #555;
   -text-shadow:0 1px 0 #666;
+}
+
+
+/* ------------------------------------------------------------------------
+   = Item
+   ------------------------------------------------------------------------ */
+.new_item input[type="text"],
+.new_item textarea,
+.edit_item input[type="text"],
+.edit_item textarea {
+  width:95%;
+}
+.new_item div,
+.edit_item div {
+  margin-bottom:3px;
 }

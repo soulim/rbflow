@@ -5,20 +5,16 @@ gem 'rails', '3.0.3'
 gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'jquery-rails'
 gem 'omniauth'
+gem 'cancan'
 gem 'rdiscount'
 
-#group :development do
-#  gem 'ruby-debug'
-#end
-
 group :development, :test do
-  gem 'rspec'
   gem 'rspec-rails'
 end
 
 group :test do
+  gem 'rspec'
 	gem 'factory_girl'
-	gem 'shoulda'
 end
 
 group :production do

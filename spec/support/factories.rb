@@ -13,7 +13,13 @@ Factory.define :admin do |f|
 end
 
 Factory.define :authentication do |f|
-  f.provider  "foo"
   f.sequence(:uid) { |n| "foo-#{n}" }
+  f.provider    "foo"
+  f.association :user
+end
+
+Factory.define :item do |f|
+  f.title       "foo"
+  f.markdown    "**bar**"
   f.association :user
 end

@@ -10,6 +10,7 @@ Rbflow::Application.routes.draw do
       put 'unapprove'
     end 
   end
+  resources :items
   
-  root :to => "sessions#new"
+  root :to => "items#index"
 end

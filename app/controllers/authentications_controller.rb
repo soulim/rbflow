@@ -1,9 +1,7 @@
 class AuthenticationsController < ApplicationController
   respond_to :html
   
-  def new
-    
-  end
+  def new; end
   
   def create
     auth = request.env['omniauth.auth']
@@ -17,7 +15,7 @@ class AuthenticationsController < ApplicationController
     self.current_user = @auth.user
 
     respond_with(@auth) do |format|
-      format.html { redirect_to root_url }
+      format.html { redirect_back_or_default root_url }
     end
   end
 end

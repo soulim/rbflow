@@ -1,7 +1,5 @@
 class UsersController < ApplicationController
-  before_filter :require_user
-  before_filter :require_admin, :only => [ :index, :approve, :unapprove, :destroy ]
-  before_filter :assign_user, :only => [ :approve, :unapprove, :destroy ]
+  load_and_authorize_resource
   
   respond_to :html
   
@@ -23,11 +21,5 @@ class UsersController < ApplicationController
   
   def destroy
     respond_with(@user.destroy)
-  end
-  
-  private
-  
-  def assign_user
-    @user = User.find_by_id(params[:id])
   end
 end

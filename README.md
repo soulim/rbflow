@@ -7,6 +7,7 @@ RbFlow is community blog engine which works behind rubyflow.ru
 ## Resources
 
 [Issue tracker](https://github.com/soulim/rbflow/issues)
+[Staging server](http://future.rubyflow.ru)
 
 ## License
 

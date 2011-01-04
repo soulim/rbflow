@@ -2,11 +2,11 @@
 
 ## Descripton
 
-RbFLow is community blog engine which works behind rubyflow.ru
+RbFlow is community blog engine which works behind rubyflow.ru
 
 ## Resources
 
-[Report Issues](https://github.com/soulim/rbflow/issues)
+[Issue tracker](https://github.com/soulim/rbflow/issues)
 
 ## License
 

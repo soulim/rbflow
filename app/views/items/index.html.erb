@@ -1,26 +1,28 @@
 <% content_for :title, t(".title") %>
 
-<section class="day container_12 clearfix">
-  <time datetime="<%= @items.first.created_at.to_s(:db) %>" pubdate="pubdate" class="grid_2">
-    <span class="date-day"><%= @items.first.created_at.strftime("%d") %></span><span class="date-month">.<%= @items.first.created_at.strftime("%m") %></span> <span class="date-year"><%= @items.first.created_at.strftime("%Y") %></span>
-  </time>
-  <section class="articles grid_8">
-    <% for item in @items %>
-    <article>
-      <header>
-        <%= link_to item.title, item %><span><%= item.author_name %></span>
-      </header>
-      <aside>
+<% if !@items.blank? %>
+  <section class="day container_12 clearfix">
+    <time datetime="<%= @items.first.created_at.to_s(:db) %>" pubdate="pubdate" class="grid_2">
+      <span class="date-day"><%= @items.first.created_at.strftime("%d") %></span><span class="date-month">.<%= @items.first.created_at.strftime("%m") %></span> <span class="date-year"><%= @items.first.created_at.strftime("%Y") %></span>
+    </time>
+    <section class="articles grid_8">
+      <% for item in @items %>
+      <article>
+        <header>
+          <%= link_to item.title, item %><span><%= item.author_name %></span>
+        </header>
+        <aside>
+          <ul>
+            <li><a href="#" onclick="Evernote.doClip({styling:'none',suggestNotebook:'rubyflow.ru',providerName:'rubyflow.ru',contentId:'entry-1029-content',url:'http://rubyflow.ru/items/1029',title:'Трюки с Hash'}); return false;"><img src="http://static.evernote.com/site-mem-16.png" alt="Сохранить в Evernote" style="vertical-align:bottom"></a></li>
+          </ul>
+        </aside>
+        <%= item.html.html_safe %>
         <ul>
-          <li><a href="#" onclick="Evernote.doClip({styling:'none',suggestNotebook:'rubyflow.ru',providerName:'rubyflow.ru',contentId:'entry-1029-content',url:'http://rubyflow.ru/items/1029',title:'Трюки с Hash'}); return false;"><img src="http://static.evernote.com/site-mem-16.png" alt="Сохранить в Evernote" style="vertical-align:bottom"></a></li>
+          <li><%= link_to("edit", edit_item_url(item)) if can?(:edit, item) %></li>
+          <li><%= link_to("delete", item_url(item), :method => :delete, :confirm => t("layouts.commons.destroy_confirmation", :subject => item.title)) if can?(:destroy, item) %></li>
         </ul>
-      </aside>
-      <%= item.html.html_safe %>
-      <ul>
-        <li><%= link_to("edit", edit_item_url(item)) if can?(:edit, item) %></li>
-        <li><%= link_to("delete", item_url(item), :method => :delete, :confirm => t("layouts.commons.destroy_confirmation", :subject => item.title)) if can?(:destroy, item) %></li>
-      </ul>
-    </article>
-    <% end %>
+      </article>
+      <% end %>
+    </section>
   </section>
-</section>
+<% end %>

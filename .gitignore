@@ -6,3 +6,5 @@ log/*.log
 tmp/**/*
 config/database.yml
 config/omniauth.yml
+Capfile
+config/deploy.rb

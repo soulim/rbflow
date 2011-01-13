@@ -61,7 +61,9 @@ ul.providers.inline img {
   display:block;
   margin:0 auto;
 }
-
+em {
+  font-style:italic;
+}
 
 article header a:hover,
 a {

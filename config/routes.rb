@@ -4,6 +4,7 @@ Rbflow::Application.routes.draw do
   match '/sign_out', :to => 'sessions#destroy'
   
   resources :sessions, :only => [ :new, :destroy ]
+  resources :pages, :only => :show
   resources :users do
     member do
       put 'approve'

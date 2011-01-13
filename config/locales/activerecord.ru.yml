@@ -54,3 +54,5 @@ ru:
       item:
         title: "Заголовок"
         markdown: "Текст статьи"
+      comment:
+        markdown: "Текст комментария"

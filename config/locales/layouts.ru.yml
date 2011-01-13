@@ -10,5 +10,8 @@ ru:
       account: "Аккаунт"
       sign_in: "Вход"
       sign_out: "Выход"
+      about: "О проекте"
+      terms: "Условия"
+      contacts: "Контактная информация"
     commons:
       destroy_confirmation: "Действительно удалить '%{subject}'?"

@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
   
   has_many :authentications, :dependent => :destroy
   has_many :items, :dependent => :nullify
+  has_many :comments, :dependent => :destroy
   
   def self.create_with_omniauth!(auth)
     self.create! do |user|

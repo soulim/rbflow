@@ -1,0 +1,7 @@
+<article class="comment">
+  <header>
+    <time datetime="<%= comment.created_at.to_s(:db) %>" pubdate="pubdate"><%= comment.created_at.strftime("%d.%m.%Y") %></time>
+    <%= comment.user.name %>
+  </header>
+  <%=raw comment.html %>
+</article>

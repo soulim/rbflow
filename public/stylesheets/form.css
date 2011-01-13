@@ -139,7 +139,9 @@ button:active,
 .new_item input[type="text"],
 .new_item textarea,
 .edit_item input[type="text"],
-.edit_item textarea {
+.edit_item textarea,
+.new_comment textarea,
+.edit_comment textarea {
   width:95%;
 }
 .new_item div,

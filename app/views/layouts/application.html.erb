@@ -6,7 +6,8 @@
     <meta name="keywords" content="<%= yield(:meta_keywords).blank? ? t(".meta_keywords") : yield(:meta_keywords) %>" />
     <meta name="author" content="<%= yield(:meta_author).blank? ? t(".meta_author") : yield(:meta_author) %>" />
     <link rel="shortcut icon" href="/favicon.ico" />
-    <%= stylesheet_link_tag "reset", "application", "960gs", "form", "wmd", "code", :cache => true %>
+    <link rel="alternate" type="application/rss+xml" title="RubyFlow.ru" href="http://feedproxy.google.com/rubyflowru" />
+    <%= stylesheet_link_tag "reset", "application", "960gs", "form", "icon", "wmd", "code", :cache => true %>
     <%= csrf_meta_tag %>
     <title><%= "#{yield(:title)} &mdash; ".html_safe unless yield(:title).blank? -%><%= t('.title') -%></title>
   </head>
@@ -30,25 +31,41 @@
     <section id="content" class="content container_12 clearfix">
       <%= yield %>
     </section>
-    <footer id="footer">
-      <section class="container_12 clearfix">
-        <section class="grid_2">
-          <p>&copy;&nbsp;2008—2010, <a href="http://soulim.com">Alex Soulim</a></p>
-          <p>При поддержке хостинг-провайдера <a href="http://locum.ru"><span>locum.ru</span></a></p>
-        </section>
-        <section class="grid_8">
-          &nbsp;
-        </section>
-        <section class="grid_2">
-          &nbsp;
-        </section>
+    <footer id="footer" class="container_12 clearfix">
+      <section class="grid_2">
+        <p>&copy;&nbsp;2008—2010, <a href="http://soulim.com">Alex Soulim</a></p>
+        <p>При поддержке хостинг-провайдера <a href="http://locum.ru"><span>locum.ru</span></a></p>
+      </section>
+      <section class="grid_8">
+        <nav>
+          <ul>
+            <li><%= link_to t(".about"), nil %></li>
+            <li><%= link_to t(".terms"), nil %></li>
+            <li><%= link_to t(".contacts"), nil %></li>
+          </ul>
+        </nav>          
+      </section>
+      <section class="grid_2">
+        <a href="http://feeds.feedburner.com/rubyflowru"><img src="http://feeds.feedburner.com/~fc/rubyflowru?bg=eeeeee&amp;fg=444444&amp;anim=0" height="26" width="88" style="border:0" alt="" /></a>
       </section>
     </footer>
-    <%= javascript_include_tag :defaults, "jquery.flash", "highlight.pack", :cache => true %>
-    <%= javascript_include_tag "http://static.evernote.com/noteit.js", :cache => false %>
+    <%= javascript_include_tag :defaults, "jquery.flash", "highlight.pack", :cache => true %>  
     <script type="text/javascript">
-      $('pre code').each(function(i, e) { hljs.highlightBlock(e, '    ')});
+      $('pre').each(function(i, e) { hljs.highlightBlock(e, '    ')});
     </script>
     <%= yield(:footer_js) %>
+
+    <% if Rails.env.production? %>
+    <%= javascript_include_tag "http://static.evernote.com/noteit.js", :cache => false %>
+    <script type="text/javascript">
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+      </script>
+      <script type="text/javascript">
+      var pageTracker = _gat._getTracker("UA-391915-11");
+      pageTracker._initData();
+      pageTracker._trackPageview();
+      </script>
+    <% end %>
   </body>
 </html>

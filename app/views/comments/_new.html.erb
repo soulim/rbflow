@@ -1,0 +1,11 @@
+<section class="preview">
+  <%= render :partial => "comments/preview", :locals => { :comment => comment } %>
+</section>
+<section class="form">
+  <%= form_for [item, comment], :remote => true do |f| %>
+    <%= render :partial => "comments/form", :locals => { :f => f } %>
+    <div class="buttons">
+      <%= f.submit t(".create") %>
+    </div>
+  <% end %>
+</section>

@@ -10,7 +10,7 @@ class Ability
       can :read, Item
 
       if !user.guest?
-        can :create, Item
+        can :create, [Item, Comment]
         can(:update, Item) { |item| item.author?(user) }
         can(:show, User) { |_user| _user.me?(user) }
       end

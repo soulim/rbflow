@@ -30,6 +30,9 @@
   border-radius:4px;
   border:rgba(207, 60, 37, 0.6) 1px dashed;
 }
+.comments .wmd-preview {
+  min-height:1em;  
+}
 
 .wmd-output { 
 	background-color: Pink;

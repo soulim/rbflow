@@ -10,7 +10,9 @@ Rbflow::Application.routes.draw do
       put 'unapprove'
     end 
   end
-  resources :items
+  resources :items do
+    resources :comments
+  end
   
   root :to => "items#index"
 end

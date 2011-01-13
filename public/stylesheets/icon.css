@@ -1,0 +1,16 @@
+.icon {
+  display:inline-block;
+  vertical-align:middle;
+  width:16px;
+  height:16px;
+  background:transparent url(/images/icon-sprite.png) 0 0 no-repeat;
+}
+.item-edit { background-position:0 0; }
+.item-remove { background-position:-16px 0; }
+.comment-add { background-position:-0px 0; }
+.comment-edit { background-position:-48px 0; }
+.comment-remove { background-position:-64px 0; }
+.user-accept { background-position:-80px 0; }
+.user-cancel { background-position:-96px 0; }
+.user-edit { background-position:-112px 0; }
+.user-remove { background-position:-128px 0; }

@@ -23,3 +23,9 @@ Factory.define :item do |f|
   f.markdown    "**bar**"
   f.association :user
 end
+
+Factory.define :comment do |f|
+  f.markdown    "**bar**"
+  f.association :item
+  f.association :user
+end

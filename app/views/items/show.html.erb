@@ -15,17 +15,25 @@
     </header>
     <aside>
       <ul>
-        <li><a href="#" onclick="Evernote.doClip({styling:'none',suggestNotebook:'rubyflow.ru',providerName:'rubyflow.ru',contentId:'entry-1029-content',url:'http://rubyflow.ru/items/1029',title:'Трюки с Hash'}); return false;"><img src="http://static.evernote.com/site-mem-16.png" alt="Сохранить в Evernote" style="vertical-align:bottom"></a></li>
+        <li><a href="#" onclick="Evernote.doClip({styling:'none',suggestNotebook:'rubyflow.ru',providerName:'rubyflow.ru',contentId:'item-<%= @item.id %>-html',url:'<%= item_url(@item) %>',title:'<%= escape_javascript @item.title %>'}); return false;"><img src="http://static.evernote.com/site-mem-16.png" alt="Сохранить в Evernote" style="vertical-align:bottom"></a></li>
       </ul>
     </aside>
-    <%= @item.html.html_safe %>
-    
+    <section id="item-<%= @item.id %>-html"><%= @item.html.html_safe %></section>
     <section class="comments clearfix">
-      <header class="grid_2"><a href="">Комментарии</a></header>
+      <header class="grid_2"><a name="comments"></a>Комментарии</header>
       <section class="grid_6">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a est nisl. Proin molestie nisl diam, nec laoreet massa. Duis nisl est, malesuada et varius at, placerat et ante. Ut eu lorem in neque rhoncus accumsan. Curabitur varius nisl at tellus accumsan mattis. Cras est lorem, egestas id ornare iaculis, interdum commodo tortor. Vestibulum tempus tortor sit amet dui adipiscing sagittis. Vivamus semper tristique urna, vel posuere magna vehicula vel.
+        <% for comment in @item.comments %>
+          <%= render comment %>
+        <% end %>
+        <% if can?(:create, Comment) %>
+          <section id="item-<%= @item.id %>-new-comment" class="new-comment">
+            <%= render(:partial => "comments/new", :locals => { :item => @item, :comment => @item.comments.new }) %>
+          </section>
+          <p><%= link_to "#{icon_tag("comment-add")} #{t(".new_comment")}".html_safe, nil, :onclick => "$('#item-#{@item.id}-new-comment').slideDown('slow');$(this).hide('fast');return false;", :class => "link-with-icon" %></p>
+        <% else %>
+          <%= t(".please_sign_in_to_add_comment") %> <%= link_to t("layouts.application.sign_in"), sign_in_url %>
+        <% end %>
       </section>
     </section>
   </article>
-
 </section>

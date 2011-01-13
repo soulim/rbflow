@@ -1,0 +1,6 @@
+<% if @comment.errors.any? %>
+  $('#item-<%= @item.id %>-new-comment').html('<%= escape_javascript render(:partial => "comments/new", :locals => { :item => @item, :comment => @comment }) %>');
+<% else %>
+  $('#item-<%= @item.id %>-new-comment').before('<%= escape_javascript render(@comment)%>');
+  $('#item-<%= @item.id %>-new-comment').html('<%= escape_javascript render(:partial => "comments/new", :locals => { :item => @item, :comment => @item.comments.new }) %>');
+<% end %>

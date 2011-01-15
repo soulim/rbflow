@@ -2,6 +2,7 @@ class ItemsController < ApplicationController
   load_and_authorize_resource
 
   respond_to :html
+  respond_to :rss, :only => :index
   
   def index
     respond_with(@items = Item.recent.limit(20))

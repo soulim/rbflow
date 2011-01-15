@@ -1,10 +1,10 @@
 ru:
   layouts:
     application:
-      meta_description: "Новости о Ruby, отобранные сообществом разработчиков"
-      meta_keywords: "Ruby,Ruby on Rails,Sinatra"
+      meta_description: "Коллективный блог сообщества разработчиков, использующих Ruby"
+      meta_keywords: "Ruby,JRuby,Rails,Sinatra,Rails3,Authlogic"
       meta_author: ""
-      title: "RubyFlow"
+      title: "RubyFlow.ru"
       new_item: "Добавить статью"
       vacancies: "Вакансии"
       account: "Аккаунт"

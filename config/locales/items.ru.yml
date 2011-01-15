@@ -3,6 +3,8 @@ ru:
     index:
       title: "Коллективный блог сообщества разработчиков, использующих Ruby"
       comments: "Комментарии"
+      previous: "&larr;"
+      next: "&rarr;"
     new:
       title: "Новая статья"
       create: "Опубликовать"

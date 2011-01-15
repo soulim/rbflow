@@ -6,6 +6,7 @@ gem 'jquery-rails'
 gem 'omniauth'
 gem 'cancan'
 gem 'rdiscount'
+gem "will_paginate", "~> 3.0.pre2"
 
 group :development, :test do
   gem 'sqlite3-ruby', :require => 'sqlite3'

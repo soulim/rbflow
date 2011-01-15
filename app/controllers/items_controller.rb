@@ -5,7 +5,7 @@ class ItemsController < ApplicationController
   respond_to :rss, :only => :index
   
   def index
-    respond_with(@items = Item.recent.limit(20))
+    respond_with(@items = Item.recent.paginate(:page => params[:page]))
   end
   
   def new

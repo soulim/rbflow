@@ -325,6 +325,32 @@ article .comments .comment {
   padding:0;
   font-size:11px;
 }
+.pagination {
+  text-align:center;
+}
+.pagination em {
+  font-style:normal;
+  font-size:22px;
+  font-weight:bold;
+}
+.pagination a {
+  display:inline-block;
+  min-width:1em;
+  padding:1px 3px;
+  text-decoration:none;
+}
+.pagination a:hover {
+  border-radius:5px;
+  background-color:#CF3C25;
+  color:#FFF;
+}
+.pagination .gap {}
+.pagination .previous_page {}
+.pagination .next_page {}
+.pagination .disabled {
+  display:none;
+}
+
 
 #footer {
   margin-top:100px;

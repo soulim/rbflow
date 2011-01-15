@@ -39,6 +39,8 @@
         <% end %>
       </article>
       <% end %>
+      
+      <%= will_paginate @posts, :previous_label => t(".previous"), :next_label => t(".next") %>
     </section>
   </section>
 <% end %>

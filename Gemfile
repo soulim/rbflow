@@ -17,7 +17,7 @@ group :test do
 	gem 'factory_girl'
 end
 
-group :production do
+group :staging, :production do
   gem 'mysql2'
   gem 'exception_notification', :git => 'git://github.com/rails/exception_notification', :require => 'exception_notifier'
 end

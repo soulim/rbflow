@@ -1,0 +1,16 @@
+development: &development
+  address: "smtp.example.com"
+  port: 25
+  domain: ""
+  user_name: "mailman@example.com"
+  password: "password"
+  authentication: "plain"
+  enable_starttls_auto: false
+test:
+  <<: *development
+  
+production:
+  <<: *development
+  
+staging:
+  <<: *development

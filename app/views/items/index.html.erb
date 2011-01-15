@@ -1,12 +1,13 @@
 <% content_for :title, t(".title") %>
 
 <% if !@items.blank? %>
+  <% @items.group_by{ |item| item.created_at.to_date }.each do |created_at, items| %>
   <section class="day container_12 clearfix">
-    <time datetime="<%= @items.first.created_at.to_s(:db) %>" pubdate="pubdate" class="grid_2">
-      <span class="date-day"><%= @items.first.created_at.strftime("%d") %></span><span class="date-month">.<%= @items.first.created_at.strftime("%m") %></span> <span class="date-year"><%= @items.first.created_at.strftime("%Y") %></span>
+    <time datetime="<%= created_at.to_s(:db) %>" pubdate="pubdate" class="grid_2">
+      <span class="date-day"><%= created_at.strftime("%d") %></span><span class="date-month">.<%= created_at.strftime("%m") %></span> <span class="date-year"><%= created_at.strftime("%Y") %></span>
     </time>
     <section class="articles grid_8">
-      <% for item in @items %>
+      <% for item in items %>
       <article>
         <header>
           <%= link_to item.title, item %><span><%= item.author_name %></span>
@@ -39,8 +40,8 @@
         <% end %>
       </article>
       <% end %>
-      
-      <%= will_paginate @posts, :previous_label => t(".previous"), :next_label => t(".next") %>
     </section>
   </section>
+  <% end %>
+  <%= will_paginate @posts, :previous_label => t(".previous"), :next_label => t(".next") %>
 <% end %>

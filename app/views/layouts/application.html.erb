@@ -10,6 +10,15 @@
     <%= stylesheet_link_tag "reset", "application", "960gs", "form", "icon", "wmd", "code", :cache => true %>
     <%= csrf_meta_tag %>
     <title><%= "#{yield(:title)} &mdash; ".html_safe unless yield(:title).blank? -%><%= t('.title') -%></title>
+    <script type="text/javascript">
+    function recordOutboundLink(link, category, action) {
+      try {
+        var myTracker=_gat._getTrackerByName();
+        _gaq.push(['myTracker._trackEvent', ' + category + ', ' + action + ']);
+        setTimeout('document.location = "' + link.href + '"', 100)
+      }catch(err){}
+    }
+    </script>
   </head>
   <body>
     <section id="flash" class="flash" style="display:none;"><%= flash_messages %></section>
@@ -19,7 +28,7 @@
         <nav>
           <ul>
             <li><%= link_to t(".new_item"), new_item_url %></li>
-            <li><%= link_to t(".vacancies"), "http://rubyjobs.ru" %></li>
+            <li><%= link_to t(".vacancies"), "http://rubyjobs.ru", :onclick => "recordOutboundLink(this, 'Outbound Links', 'rubyjobs.ru');return false;" %></li>
           </ul>
         </nav>          
       </section>
@@ -34,7 +43,7 @@
     <footer id="footer" class="container_12 clearfix">
       <section class="grid_2">
         <p>&copy;&nbsp;2008—2011, <a href="http://soulim.com">Alex Soulim</a></p>
-        <p>При поддержке хостинг-провайдера <a href="http://locum.ru"><span>locum.ru</span></a></p>
+        <p>При поддержке хостинг-провайдера <a href="http://locum.ru" onclick="recordOutboundLink(this, 'Outbound Links', 'locum.ru');return false;"><span>locum.ru</span></a></p>
       </section>
       <section class="grid_8">
         <nav>
@@ -56,15 +65,17 @@
     <%= yield(:footer_js) %>
 
     <% if Rails.env.production? %>
-    <%= javascript_include_tag "http://static.evernote.com/noteit.js", :cache => false %>
-    <script type="text/javascript">
-      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-      </script>
+      <%= javascript_include_tag "http://static.evernote.com/noteit.js", :cache => false %>
       <script type="text/javascript">
-      var pageTracker = _gat._getTracker("UA-391915-11");
-      pageTracker._initData();
-      pageTracker._trackPageview();
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-391915-11']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
       </script>
     <% end %>
   </body>

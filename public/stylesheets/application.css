@@ -19,6 +19,7 @@ h2 {
   font-weight:bold;
   margin-bottom:1em;
 }
+h1, h2, h3, h4, p { word-wrap:break-word; }
 article header a {
   color:#444;
   text-decoration:none;  
@@ -68,6 +69,9 @@ em {
 article header a:hover,
 a {
   color:#758EA2;
+}
+a:hover {
+  color:#5b6e7e;
 }
 .link-with-icon {
   text-decoration:none;

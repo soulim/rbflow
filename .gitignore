@@ -2,6 +2,7 @@
 .DS_Store
 db/*.sqlite3
 db/schema.rb
+db/sphinx/**/*
 log/*.log
 tmp/**/*
 config/database.yml
@@ -10,3 +11,4 @@ config/mail.yml
 Capfile
 config/deploy.rb
 config/deploy
+config/*.sphinx.conf

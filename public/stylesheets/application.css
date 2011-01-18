@@ -355,6 +355,19 @@ article .comments .comment {
   display:none;
 }
 
+.search-results {}
+.search-results h1 {
+  color:#B2B2B2;
+}
+.search-results .counter {
+  padding:4px 4px;
+  border-radius:5px;
+  background-color:#C1DE4B;
+  color:#FFF;
+  text-align:center;
+  font-size:22px;
+}
+
 
 #footer {
   margin-top:100px;

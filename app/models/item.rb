@@ -12,6 +12,11 @@ class Item < ActiveRecord::Base
   
   scope :recent, includes(:user).order("created_at desc")
   
+  define_index do
+    indexes html
+    indexes user.name, :as => :author
+  end
+  
   def author?(user)
     self.user_id == user.id
   end

@@ -6,7 +6,7 @@ gem 'jquery-rails'
 gem 'omniauth'
 gem 'cancan'
 gem 'rdiscount'
-gem "will_paginate", "~> 3.0.pre2"
+gem 'will_paginate', '~> 3.0.pre2'
 gem 'thinking-sphinx', :require => 'thinking_sphinx'
 
 group :development, :test do

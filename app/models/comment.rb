@@ -4,6 +4,8 @@ class Comment < ActiveRecord::Base
   
   validates_presence_of :item_id, :user_id, :markdown
   
+  attr_accessible :markdown
+  
   before_save :assign_html, :if => :markdown?
   
   private

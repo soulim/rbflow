@@ -9,6 +9,8 @@ class User < ActiveRecord::Base
   has_many :items, :dependent => :nullify
   has_many :comments, :dependent => :destroy
   
+  attr_protected :role
+  
   def self.create_with_omniauth!(auth)
     self.create! do |user|
       user.name       = auth["user_info"]["name"]

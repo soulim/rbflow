@@ -8,6 +8,8 @@ class Item < ActiveRecord::Base
   validates_presence_of :title, :markdown
   validates_presence_of :user_id, :on => :create
   
+  attr_accessible :title, :markdown
+  
   before_save :assign_html, :if => :markdown?
   
   scope :recent, includes(:user).order("created_at desc")

@@ -53,9 +53,13 @@
         <nav>
           <ul>
             <li><%= link_to t(".about"), page_url(:id => "about") %></li>
-            <!-- li><%= link_to t(".terms"), page_url(:id => "terms") %></li -->
             <li><%= link_to t(".contacts"), page_url(:id => "contacts") %></li>
           </ul>
+          <% if can?(:manage, :all) %>
+          <ul>
+            <li><%= link_to t(".users"), users_url %></li>
+          </ul>
+          <% end %>
         </nav>          
       </section>
       <section class="grid_2">

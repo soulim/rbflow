@@ -13,6 +13,7 @@ ru:
       sign_out: "Выход"
       about: "О проекте"
       terms: "Условия"
+      users: "Пользователи"
       contacts: "Контактная информация"
     commons:
       destroy_confirmation: "Действительно удалить '%{subject}'?"

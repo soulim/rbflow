@@ -313,7 +313,9 @@ article .comments .comment {
   border-radius:5px;
 }
 
-.users {}
+.users {
+  margin-bottom:1em;
+}
 .users tr {
   margin:0;
   padding:0;

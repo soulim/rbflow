@@ -33,8 +33,14 @@ ul,
 ol {
   margin-bottom:1em;
 }
+ul, ol {
+  padding-left:1.5em;
+}
 ul {
-  padding-left:1em;
+  list-style-type:circle;
+}
+ol {
+  list-style-type:decimal;
 }
 ul li {
   list-style:disc outside none;
@@ -132,6 +138,9 @@ a:hover {
 }
 #header .search {
   text-align:right;
+}
+#header .search input {
+  width:100%;
 }
 #header .account {
   position:absolute;

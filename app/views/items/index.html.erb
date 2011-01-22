@@ -32,12 +32,6 @@
           </section>
         </section>
         <% end %>
-        <% if can? :manage, item %>
-        <ul class="admin-buttons">
-          <li><%= link_to(icon_tag("item-edit"), edit_item_url(item)) if can?(:edit, item) %></li>
-          <li><%= link_to(icon_tag("item-remove"), item_url(item), :method => :delete, :confirm => t("layouts.commons.destroy_confirmation", :subject => item.title)) if can?(:destroy, item) %></li>
-        </ul>
-        <% end %>
       </article>
       <% end %>
     </section>

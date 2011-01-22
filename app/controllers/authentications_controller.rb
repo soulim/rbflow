@@ -19,7 +19,7 @@ class AuthenticationsController < ApplicationController
   end
   
   def destroy
-    @authentication.destroy && flash[:notice] = t("authentications.destroy.successful")
+    @authentication.destroy and flash[:notice] = t("authentications.destroy.successful")
     respond_with(@authentication, :location => user_url(current_user))
   end
 end

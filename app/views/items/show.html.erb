@@ -1,7 +1,6 @@
 <% content_for :title, @item.title %>
 <% content_for :meta_description, @item.title %>
-<% content_for :meta_author, @item.user.name %>
-
+<% content_for :meta_author, @item.author_name %>
 
 <section class="grid_2 day">
   <time datetime="<%= @item.created_at.to_s(:db) %>" pubdate="pubdate">
@@ -11,7 +10,7 @@
 <section class="grid_8">
   <article>
     <header>
-      <%= @item.title %><span><%= @item.user.name %></span>
+      <%= @item.title %><span><%= @item.author_name %></span>
     </header>
     <aside>
       <ul>
@@ -36,4 +35,8 @@
       </section>
     </section>
   </article>
+</section>
+<section class="grid_2">
+  <%= link_to("#{icon_tag("item-edit")} #{t(".edit")}".html_safe, edit_item_url(@item), :class => "link-with-icon") if can?(:edit, @item) %>
+  <%= link_to("#{icon_tag("item-remove")} #{t(".destroy")}".html_safe, item_url(@item), :method => :delete, :confirm => t("layouts.commons.destroy_confirmation", :subject => @item.title), :class => "link-with-icon") if can?(:destroy, @item) %>
 </section>

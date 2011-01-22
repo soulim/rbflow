@@ -9,11 +9,19 @@ ru:
       title: "Новая статья"
       create: "Опубликовать"
       cancel: "Отмена"
+    create:
+      successful: "Статья добавлена"
     edit:
       title: "Редактирование статьи"
       update: "Обновить"
       cancel: "Отмена"
+    update:
+      successful: "Статья обновлена"
     show:
+      edit: "Редактировать"
+      destroy: "Удалить"
       comments: "Комментарии"
       new_comment: "Добавить свое мнение"
       please_sign_in_to_add_comment: "Пожалуйста авторизуйтесь, чтобы добавить комментарий."
+    destroy:
+      successful: "Статья удалена"

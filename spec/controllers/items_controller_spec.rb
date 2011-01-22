@@ -199,6 +199,30 @@ describe ItemsController do
       end
     end
     
+    context "when user is not an admin but author" do
+      before { item.stub(:author?).and_return(true) }
+      
+      it "assigns @item" do
+        delete :destroy, :id => item.id
+        assigns[:item].should eq(item)
+      end
+
+      it "destroy item" do
+        item.should_receive(:destroy)
+        delete :destroy, :id => item.id
+      end
+
+      it "sets flash notice" do
+        delete :destroy, :id => item.id
+        flash[:notice].should_not be_blank
+      end
+      
+      it "redirects to sign in URL" do
+        delete :destroy, :id => item.id
+        response.should redirect_to(items_url)
+      end
+    end    
+
     context "when user is a guest" do
       before { controller.stub(:current_user).and_return(nil) }
       
@@ -213,7 +237,9 @@ describe ItemsController do
       end
     end
 
-    context "when user is not an admin" do
+    context "when user is not an admin and not author" do
+      before { item.stub(:author?).and_return(false) }
+      
       it "sets flash notice" do
         delete :destroy, :id => item.id
         flash[:notice].should_not be_blank

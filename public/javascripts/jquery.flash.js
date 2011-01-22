@@ -18,7 +18,7 @@
 			};
 		},
 		toggle: function () {
-			$this.slideDown("slow").delay(2000).slideUp("fast");
+			$this.slideDown("slow").delay(4000).slideUp("fast");
 		},
 		notice: function ( message ) {
 			$this.html($("<div />", { "class": "message notice", text: message }));

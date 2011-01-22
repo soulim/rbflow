@@ -40,4 +40,8 @@ class User < ActiveRecord::Base
   def me?(user)
     self.id == user.id
   end
+  
+  def providers
+    self.authentications.collect(&:provider)
+  end
 end

@@ -1,27 +1,30 @@
-<section class="grid_2">
-  <h1><%= t(".title") %></h1>
-</section>
+<% content_for :title, t(".title") %>
+
 <section class="grid_1">
   <%= image_tag avatar_url(@user), :size => "48x48", :alt => @user.name, :class => "avatar" %>
+  <p><%= link_to t("layouts.application.sign_out"), sign_out_url, :class => "link-with-icon" %></p>
 </section>
-<section class="grid_7">
-  <article>
-    <header><%= @user.name %></header>
-    <p><%= t("activerecord.attributes.user.email") %>: <%= auto_link @user.email %></p>
-    <h2><%= t(".used_providers") %>:</h2>
-    <ul>
-      <% for authentication in @user.authentications %>
-      <li><%= authentication.provider_name %></li>
-      <% end %>
-    </ul>
-    <h2><%= t(".all_providers") %>:</h2>
-    <ul class="providers inline">
-      <li><%= link_to "#{image_tag("openid_64.png", :size => "64x64")} OpenID".html_safe, "/auth/open_id" %></li>
-      <li><%= link_to "#{image_tag("github_64.png", :size => "64x64")} GitHub".html_safe, "/auth/github" %></li>
-      <li><%= link_to "#{image_tag("twitter_64.png", :size => "64x64")} Twitter".html_safe, "/auth/twitter" %></li>
-    </ul>
-  </article>
+<section class="grid_6">
+  <h1 class="header-with-comment"><%= @user.name %> <span><%= @user.email %></span></h1>
 </section>
-<section class="grid_2">
-  <%= link_to t("layouts.application.sign_out"), sign_out_url %>
+<section class="grid_5">
+  <h2><%= t(".providers") %>:</h2>
+  <table width="100%" class="providers">
+    <!-- not installed providers -->
+    <% for provider in Authentication::PROVIDERS.keys - @user.providers %>
+    <tr>
+      <td width="20%"><%= image_tag("#{provider}_64.png", :size => "64x64") %></td>
+      <td width="60%"><%= Authentication::PROVIDERS[provider] %></td>
+      <td width="20%"><%= link_to t(".add_provider"), "/auth/#{provider}", :class => "positive small button min-width uppercase" %></td>
+    </tr>
+    <% end %>
+    <!-- installed providers -->
+    <% for authentication in @user.authentications %>
+    <tr>
+      <td width="20%"><%= image_tag("#{authentication.provider}_64.png", :size => "64x64") %></td>
+      <td width="60%"><%= authentication.provider_name %></td>
+      <td width="20%"><%= link_to(t(".remove_provider"), [current_user, authentication], :method => :delete, :class => "negative small button min-width uppercase") if can?(:destroy, authentication) %></td>
+    </tr>
+    <% end %>
+  </table>
 </section>

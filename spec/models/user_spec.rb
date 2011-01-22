@@ -106,5 +106,5 @@ describe User do
         subject.me?(Factory(:user)).should be_false
       end
     end
-  end  
+  end
 end

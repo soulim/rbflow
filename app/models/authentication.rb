@@ -1,4 +1,10 @@
 class Authentication < ActiveRecord::Base
+  PROVIDERS = {
+    "open_id" => "OpenID",
+    "github"  => "GitHub",
+    "twitter" => "Twitter"
+  }
+  
   belongs_to :user
   
   validates_presence_of :user_id, :uid, :provider
@@ -10,6 +16,6 @@ class Authentication < ActiveRecord::Base
   end
   
   def provider_name
-    (self.provider == "open_id") ? "OpenID" : self.provider.titleize
-  end
+    PROVIDERS[self.provider]
+  end  
 end

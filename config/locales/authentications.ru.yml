@@ -1,0 +1,4 @@
+ru:
+  authentications:
+    destroy:
+      successful: "Провайдер удален, но его всегда можно добавить обратно"

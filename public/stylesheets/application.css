@@ -45,28 +45,18 @@ ol {
 ul li {
   list-style:disc outside none;
 }
-ul.providers {
+.providers {
   padding:0;
   font-weight:bold;
 }
-ul.providers li {
+.providers li {
   list-style:none outside none;
 }
-ul.providers a {
+.providers a {
   text-decoration:none;
 }
-ul.providers img {
+.providers img {
   vertical-align:middle;
-}
-
-ul.providers.inline li {
-  display:inline-block;
-  width:90px;
-  text-align:center;
-}
-ul.providers.inline img {
-  display:block;
-  margin:0 auto;
 }
 em {
   font-style:italic;
@@ -89,6 +79,9 @@ a:hover {
 }
 .link-with-icon .icon {
   margin-right:4px;
+}
+.uppercase {
+  text-transform:uppercase;
 }
 /* ------------------------------------------------------------------------
    = Flash message
@@ -216,13 +209,15 @@ article {
   position:relative;
   margin-bottom:4em;
 }
-article header {
+article header,
+.header-with-comment {
   margin-bottom:0.5em;
   padding:0;
   font-size:22px;
   font-weight:bold;
 }
-article header span {
+article header span,
+.header-with-comment span {
   display:block;
   margin-top:3px;
   padding-top:3px;

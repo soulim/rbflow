@@ -12,7 +12,8 @@ Rbflow::Application.routes.draw do
     member do
       put 'approve'
       put 'unapprove'
-    end 
+    end
+    resources :authentications, :only => :destroy
   end
   resources :items do
     resources :comments

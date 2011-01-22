@@ -33,7 +33,7 @@ describe Authentication do
 
   describe "#provider_name" do
     it "returns titleized provider name" do
-      subject.provider_name.should == subject.provider.titleize
+      subject.provider_name.should == Authentication::PROVIDERS[subject.provider]
     end
   end
 end

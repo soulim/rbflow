@@ -7,8 +7,6 @@ ru:
       destroy: "Удалить"
     show:
       title: "Аккаунт"
-      used_providers: "Для аутентификации уже используются"
-      all_providers: "Можно добавить еще"
-      sidebar:
-        about: "Информация"
-        items: "Статьи"
+      providers: "Провайдеры аутентификации"
+      add_provider: "Добавить"
+      remove_provider: "Удалить"

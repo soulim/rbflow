@@ -4,8 +4,8 @@
 <section class="grid_5">
   <h1><%= t(".choose_provider") %></h1>
   <ul class="providers">
-    <li><%= link_to "#{image_tag("openid_64.png", :size => "64x64")} OpenID".html_safe, "/auth/open_id" %></li>
-    <li><%= link_to "#{image_tag("github_64.png", :size => "64x64")} GitHub".html_safe, "/auth/github" %></li>
-    <li><%= link_to "#{image_tag("twitter_64.png", :size => "64x64")} Twitter".html_safe, "/auth/twitter" %></li>
+    <% for provider in Authentication::PROVIDERS.keys %>
+      <li><%= link_to "#{image_tag("#{provider}_64.png", :size => "64x64")} #{Authentication::PROVIDERS[provider]}".html_safe, "/auth/#{provider}" %></li>
+    <% end %>
   </ul>
 </section>

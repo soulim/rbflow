@@ -131,8 +131,22 @@ button:active,
   border:1px solid #555;
   -text-shadow:0 1px 0 #666;
 }
-
-
+.button.min-width {
+  min-width:65px;
+  padding:0;
+  text-align:center;
+  font-size:9px;
+}
+.button.positive {
+  background: #00AE3E;
+  border-color: #393 #393 #277827;
+  color:#FFF;
+}
+.button.negative {
+  background:#C63738;
+  border-color: #A33 #A33 #962C2C;
+  color:#FFF;
+}
 /* ------------------------------------------------------------------------
    = Item
    ------------------------------------------------------------------------ */

@@ -10,15 +10,6 @@
     <%= stylesheet_link_tag "reset", "application", "960gs", "form", "icon", "wmd", "code", :cache => true %>
     <%= csrf_meta_tag %>
     <title><%= "#{yield(:title)} &mdash; ".html_safe unless yield(:title).blank? -%><%= t('.title') -%></title>
-    <script type="text/javascript">
-    function recordOutboundLink(link, category, action) {
-      try {
-        var myTracker=_gat._getTrackerByName();
-        _gaq.push(['myTracker._trackEvent', ' + category + ', ' + action + ']);
-        setTimeout('document.location = "' + link.href + '"', 100)
-      }catch(err){}
-    }
-    </script>
   </head>
   <body>
     <section id="flash" class="flash" style="display:none;"><%= flash_messages %></section>
@@ -28,7 +19,7 @@
         <nav>
           <ul>
             <li><%= link_to t(".new_item"), new_item_url %></li>
-            <li><%= link_to t(".vacancies"), "http://rubyjobs.ru", :onclick => "recordOutboundLink(this, 'Outbound Links', 'rubyjobs.ru');return false;" %></li>
+            <li><%= link_to t(".vacancies"), "http://rubyjobs.ru" %></li>
           </ul>
         </nav>          
       </section>
@@ -47,7 +38,7 @@
     <footer id="footer" class="container_12 clearfix">
       <section class="grid_2">
         <p>&copy;&nbsp;2008—2011, <a href="http://soulim.com">Alex Soulim</a></p>
-        <p>При поддержке хостинг-провайдера <a href="http://locum.ru" onclick="recordOutboundLink(this, 'Outbound Links', 'locum.ru');return false;"><span>locum.ru</span></a></p>
+        <p>При поддержке хостинг-провайдера <a href="http://locum.ru"><span>locum.ru</span></a></p>
       </section>
       <section class="grid_8">
         <nav>

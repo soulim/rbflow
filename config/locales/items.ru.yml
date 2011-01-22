@@ -14,5 +14,6 @@ ru:
       update: "Обновить"
       cancel: "Отмена"
     show:
+      comments: "Комментарии"
       new_comment: "Добавить свое мнение"
       please_sign_in_to_add_comment: "Пожалуйста авторизуйтесь, чтобы добавить комментарий."

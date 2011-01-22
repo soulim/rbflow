@@ -20,7 +20,7 @@
     </aside>
     <section id="item-<%= @item.id %>-html"><%= @item.html.html_safe %></section>
     <section class="comments clearfix">
-      <header class="grid_2"><a name="comments"></a>Комментарии</header>
+      <header class="grid_2"><a name="comments"></a><%= t(".comments") %></header>
       <section class="grid_6">
         <% for comment in @item.comments %>
           <%= render comment %>

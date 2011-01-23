@@ -37,6 +37,10 @@
   </article>
 </section>
 <section class="grid_2">
-  <%= link_to("#{icon_tag("item-edit")} #{t(".edit")}".html_safe, edit_item_url(@item), :class => "link-with-icon") if can?(:edit, @item) %>
-  <%= link_to("#{icon_tag("item-remove")} #{t(".destroy")}".html_safe, item_url(@item), :method => :delete, :confirm => t("layouts.commons.destroy_confirmation", :subject => @item.title), :class => "link-with-icon") if can?(:destroy, @item) %>
+  <% if can?(:edit, @item) %>
+  <ul class="admin-buttons">
+    <%= content_tag :li, link_to("#{icon_tag("item-edit")} #{t(".edit")}".html_safe, edit_item_url(@item), :class => "link-with-icon") if can?(:edit, @item) %>
+    <%= content_tag :li, link_to("#{icon_tag("item-remove")} #{t(".destroy")}".html_safe, item_url(@item), :method => :delete, :confirm => t("layouts.commons.destroy_confirmation", :subject => @item.title), :class => "link-with-icon") if can?(:destroy, @item) %>
+  </ul>
+  <% end %>
 </section>

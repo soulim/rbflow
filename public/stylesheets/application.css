@@ -325,15 +325,12 @@ article .comments .comment {
 }
 
 .admin-buttons {
-  padding:2px 4px;
-  background-color:rgba(243, 246, 250, 1);
-  text-align:right;
+  padding:0;
 }
 .admin-buttons li {
-  display:inline;
   margin:0 1em 0 0;
   padding:0;
-  font-size:11px;
+  list-style:none outside;
 }
 .pagination {
   text-align:center;

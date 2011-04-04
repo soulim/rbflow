@@ -11,6 +11,7 @@ gem 'thinking-sphinx', :require => 'thinking_sphinx'
 gem 'backup'
 gem 'backup-task'
 gem 'fog'
+gem 'whenever', :require => false
 
 group :development, :test do
   gem 'sqlite3-ruby', :require => 'sqlite3'

@@ -3,12 +3,14 @@
 db/*.sqlite3
 db/schema.rb
 db/sphinx/**/*
+db/db_backup
 log/*.log
 log/*.pid
 tmp/**/*
 config/database.yml
 config/omniauth.yml
 config/mail.yml
+config/backup.yml
 Capfile
 config/deploy.rb
 config/deploy

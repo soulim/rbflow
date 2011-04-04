@@ -8,6 +8,9 @@ gem 'cancan'
 gem 'rdiscount'
 gem 'will_paginate', '~> 3.0.pre2'
 gem 'thinking-sphinx', :require => 'thinking_sphinx'
+gem 'backup'
+gem 'backup-task'
+gem 'fog'
 
 group :development, :test do
   gem 'sqlite3-ruby', :require => 'sqlite3'

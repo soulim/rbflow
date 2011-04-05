@@ -15,4 +15,3 @@ Capfile
 config/deploy.rb
 config/deploy
 config/*.sphinx.conf
-config/schedule.rb

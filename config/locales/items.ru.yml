@@ -2,6 +2,7 @@ ru:
   items:
     index:
       title: "Коллективный блог сообщества разработчиков, использующих Ruby"
+      event: "Интересное событие"
       comments: "Комментарии"
       previous: "&larr;"
       next: "&rarr;"

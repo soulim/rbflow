@@ -1,11 +1,15 @@
 development: &development
-  address: "smtp.example.com"
-  port: 25
-  domain: ""
-  user_name: "mailman@example.com"
-  password: "password"
-  authentication: "plain"
-  enable_starttls_auto: false
+  smtp_settings:
+    address: "smtp.example.com"
+    port: 25
+    domain: "example.com"
+    user_name: "mailman@example.com"
+    password: "password"
+    authentication: "plain"
+    enable_starttls_auto: true
+  host: "localhost:3000"
+  default_recipient: "user@example.com"
+
 test:
   <<: *development
   

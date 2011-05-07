@@ -11,6 +11,7 @@ config/database.yml
 config/omniauth.yml
 config/mail.yml
 config/backup.yml
+config/sphinx.yml
 Capfile
 config/deploy.rb
 config/deploy

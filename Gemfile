@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.6'
+gem 'rails', '3.0.7'
 
 gem 'jquery-rails'
 gem 'omniauth'
@@ -14,12 +14,11 @@ gem 'fog'
 gem 'whenever', :require => false
 
 group :development, :test do
-  gem 'sqlite3-ruby', :require => 'sqlite3'
+  gem 'sqlite3'
   gem 'rspec-rails'
 end
 
 group :test do
-  gem 'rspec'
 	gem 'factory_girl_rails'
 end
 

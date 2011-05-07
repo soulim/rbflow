@@ -6,7 +6,7 @@ gem 'jquery-rails'
 gem 'omniauth'
 gem 'cancan'
 gem 'rdiscount'
-gem 'will_paginate', '~> 3.0.pre2'
+gem 'kaminari'
 gem 'thinking-sphinx', :require => 'thinking_sphinx'
 gem 'backup'
 gem 'backup-task'
@@ -23,6 +23,6 @@ group :test do
 end
 
 group :staging, :production do
-  gem 'mysql2'
+  gem 'mysql2', '< 0.3'
   gem 'exception_notification', :require => 'exception_notifier'
 end

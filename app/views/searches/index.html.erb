@@ -13,7 +13,7 @@
       <section id="item-<%= item.id %>-html"><%= item.html.html_safe %></section>
     </article>
   <% end %>
-  <%= will_paginate @items, :previous_label => t("items.index.previous"), :next_label => t("items.index.next") %>
+  <%= paginate @items %>
 </section>
 <section class="grid_2">
   &nbsp;

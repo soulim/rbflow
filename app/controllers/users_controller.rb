@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   respond_to :html
   
   def index
-    respond_with(@users = User.order("created_at DESC").paginate(:page => params[:page]))
+    respond_with(@users = User.order("created_at DESC").page(params[:page]).per(20))
   end
     
   def show

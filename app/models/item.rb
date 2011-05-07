@@ -1,7 +1,4 @@
 class Item < ActiveRecord::Base
-  cattr_reader :per_page
-  @@per_page = 30
-    
   belongs_to :user
   has_many :comments, :dependent => :destroy
   

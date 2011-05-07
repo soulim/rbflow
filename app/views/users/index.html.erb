@@ -17,5 +17,5 @@
     </tr>
   <% end %>
   </table>
-  <%= will_paginate @users, :previous_label => t("items.index.previous"), :next_label => t("items.index.next") %>
+  <%= paginate @users %>
 </section>

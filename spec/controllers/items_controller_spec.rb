@@ -8,7 +8,7 @@ describe ItemsController do
   
   describe "GET index" do
     it "assigns @items" do
-      Item.stub_chain(:recent, :paginate).and_return([item])
+      Item.stub_chain(:recent, :page, :per).and_return([item])
       get :index
       assigns[:items].should eq([item])
     end

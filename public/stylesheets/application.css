@@ -217,6 +217,34 @@ a:hover {
 #content {
   margin-top:12px;
 }
+ /* ------------------------------------------------------------------------
+   = Event
+   ------------------------------------------------------------------------ */
+.event {
+  margin-bottom:2em;
+  padding-bottom:1em;
+  border-bottom:#DDD 1px dashed;
+}
+.event header {
+  text-align:center;
+  color:#B2B2B2;
+  font-weight:bold;
+  line-height:1;
+}
+.banner {
+  width:100%;
+  text-align:left;
+}
+.banner div {
+  display:inline;
+  text-align:left;
+}
+.banner h3 {
+  line-height:1;
+}
+.banner a {
+  text-decoration:none;
+}
 /* ------------------------------------------------------------------------
    = Day
    ------------------------------------------------------------------------ */

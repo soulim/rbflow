@@ -1,13 +1,5 @@
 <% content_for :title, t(".title") %>
 
-<% if params[:page].blank? %>
-<section class="event container_12 clearfix">
-  <header class="grid_2"><%= t("items.index.event") %></header>
-  <section class="grid_2"><%= link_to image_tag("devconf_logo_130x30.png", :size => "130x30", :alt => "DevConf 2011"), "http://devconf.ru", :target => "_blank" -%></section>
-  <section class="grid_6 banner"><script src="http://inf.devconf.ru/rotator/?place=144"></script></section>
-</section>
-<% end %>
-
 <section class="grid_2 search-results">
   <h1><%= t(".title") %></h1>
   <section class="counter"><%= @items.total_entries %></section>

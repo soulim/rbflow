@@ -1,13 +1,5 @@
 <% content_for :title, t(".title") %>
 
-<% if params[:page].blank? %>
-<section class="event container_12 clearfix">
-  <header class="grid_2"><%= t(".event") %></header>
-  <section class="grid_2"><%= link_to image_tag("devconf_logo_130x30.png", :size => "130x30", :alt => "DevConf 2011"), "http://devconf.ru", :target => "_blank" -%></section>
-  <section class="grid_6 banner"><script src="http://inf.devconf.ru/rotator/?place=144"></script></section>
-</section>
-<% end %>
-
 <% if !@items.blank? %>
   <% @items.group_by{ |item| item.created_at.to_date }.each do |created_at, items| %>
   <section class="day container_12 clearfix">

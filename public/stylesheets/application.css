@@ -232,15 +232,10 @@ a:hover {
   line-height:1;
 }
 .banner {
-  width:100%;
-  text-align:left;
+  padding:12px 0;  
 }
-.banner div {
-  display:inline;
-  text-align:left;
-}
-.banner h3 {
-  line-height:1;
+.banner:nth-child(odd) {
+  border-bottom:#CCC 2px dashed;
 }
 .banner a {
   text-decoration:none;

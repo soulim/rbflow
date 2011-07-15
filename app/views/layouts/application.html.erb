@@ -10,6 +10,18 @@
     <%= stylesheet_link_tag "reset", "application", "960gs", "form", "icon", "wmd", "code", :cache => true %>
     <%= csrf_meta_tag %>
     <title><%= "#{yield(:title)} &mdash; ".html_safe unless yield(:title).blank? -%><%= t('.title') -%></title>
+    <script type='text/javascript' src='http://partner.googleadservices.com/gampad/google_service.js'>
+    </script>
+    <script type='text/javascript'>
+    GS_googleAddAdSenseService("ca-pub-3327317497719536");
+    GS_googleEnableAllServices();
+    </script>
+    <script type='text/javascript'>
+    GA_googleAddSlot("ca-pub-3327317497719536", "Banner620x80");
+    </script>
+    <script type='text/javascript'>
+    GA_googleFetchAds();
+    </script>
   </head>
   <body>
     <section id="flash" class="flash" style="display:none;"><%= flash_messages %></section>

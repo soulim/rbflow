@@ -466,6 +466,9 @@ article .comments .comment {
 #footer a {
   color:#444;
 }
+#footer .partner {
+  text-decoration:none;
+}
 #footer p {
   margin-bottom:10px;
   line-height:14px;
@@ -486,7 +489,6 @@ article .comments .comment {
   margin-left:2em;
 } 
 #footer nav a {
-  -text-decoration:none;
 }
 #footer nav a:hover {
 }

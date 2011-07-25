@@ -1,11 +1,11 @@
 <section class="grid_7">
-  <%= markdown t(".description") %>
-</section>
-<section class="grid_5">
   <h1><%= t(".choose_provider") %></h1>
   <ul class="providers">
     <% for provider in Authentication::PROVIDERS.keys %>
       <li><%= link_to "#{image_tag("#{provider}_64.png", :size => "64x64")} #{Authentication::PROVIDERS[provider]}".html_safe, "/auth/#{provider}" %></li>
     <% end %>
   </ul>
+</section>
+<section class="grid_5">
+  <%= markdown t(".description") %>
 </section>

@@ -50,6 +50,8 @@ ul li {
   font-weight:bold;
 }
 .providers li {
+  display:inline-block;
+  margin-right:2em;
   list-style:none outside none;
 }
 .providers a {

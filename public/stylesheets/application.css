@@ -139,6 +139,33 @@ a:hover {
 }
 .flash .error { color:#CF3C25; }
 
+/* ------------------------------------------------------------------------
+   = Control panel
+   ------------------------------------------------------------------------ */
+#control-panel {
+  border-bottom-right-radius:5px;
+  border-bottom-left-radius:5px;
+  background-color:#444;
+  color:#CCC;
+  font-size:11px;
+}
+#control-panel a {
+  color:inherit;
+  text-decoration:none;
+}
+#control-panel a:hover {
+  color:#FFF;
+}
+#control-panel ul {
+  margin:0;
+}
+#control-panel ul li {
+  display:inline-block;
+  list-style:none outside none;
+}
+/* ------------------------------------------------------------------------
+   = Header
+   ------------------------------------------------------------------------ */
 #header {
   position:relative;
   padding:24px 0;

@@ -26,6 +26,13 @@
   </head>
   <body>
     <section id="flash" class="flash" style="display:none;"><%= flash_messages %></section>
+    <% if can?(:manage, :all) %>
+    <nav id="control-panel" class="control-panel container_12 clearfix">
+      <ul>
+        <li><%= link_to t(".users"), users_url %></li>
+      </ul>
+    </nav>
+    <% end %>
     <header id="header" class="container_12 clearfix">
       <section class="logo grid_2"><%= link_to_if !current_page?(root_url), "Ruby<span>Flow</span>".html_safe, root_url %></section>
       <section class="menu grid_8">
@@ -59,11 +66,6 @@
             <li><%= link_to t(".about"), page_url(:id => "about") %></li>
             <li><%= link_to t(".contacts"), page_url(:id => "contacts") %></li>
           </ul>
-          <% if can?(:manage, :all) %>
-          <ul>
-            <li><%= link_to t(".users"), users_url %></li>
-          </ul>
-          <% end %>
         </nav>          
       </section>
       <section class="grid_2">

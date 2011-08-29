@@ -220,6 +220,7 @@ a:hover {
 .event {
   margin-bottom:2em;
   padding-bottom:1em;
+  border-bottom:#CCC 1px dotted;
 }
 .event header {
   margin-bottom:1em;
@@ -259,6 +260,8 @@ a:hover {
   font-weight:bold;
 }
 .event .slide {
+  margin:0;
+  padding:0;
   color:#888;
   font-size:12px;
   line-height:18px;

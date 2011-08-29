@@ -127,9 +127,7 @@ button:active,
 .button.small:active {
   background:-webkit-gradient(linear, left top, left bottom, from(#AAA), to(#FFF));
   background:-moz-linear-gradient(top,  #AAA,  #FFF);
-  -color:#fff;
   border:1px solid #555;
-  -text-shadow:0 1px 0 #666;
 }
 .button.min-width {
   min-width:65px;

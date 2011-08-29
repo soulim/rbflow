@@ -252,7 +252,8 @@ a:hover {
 .event .list ul li.current a {
   text-decoration:none;
 }
-.event .list ul a {
+.event .list ul header {
+  margin:0;
   color:#444;
   font-size:14px;
   font-weight:bold;

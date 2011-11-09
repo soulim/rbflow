@@ -1,59 +1,5 @@
 <% content_for :title, t(".title") %>
 
-<% if params[:page].blank? %>	 	
-  <section class="event container_12 clearfix">
-    <section class="list grid_2">
-      <ul>
-        <li class="current" onclick="$('li.current').removeClass('current'); $(this).addClass('current'); $('.slide.current').removeClass('current').hide(); $('#rubyc').addClass('current').show();">
-          <header>RubyC</header>
-          5-6 ноября<br />
-          Киев, Украина
-        </li>
-        <li onclick="$('li.current').removeClass('current'); $(this).addClass('current'); $('.slide.current').removeClass('current').hide(); $('#rupy').addClass('current').show();">
-          <header>RuPy</header>
-          14-16 октября<br />
-          Познань, Польша
-        </li>
-        <li onclick="$('li.current').removeClass('current'); $(this).addClass('current'); $('.slide.current').removeClass('current').hide(); $('#apps4russia').addClass('current').show();">
-          <header>Apps4Russia</header>
-          30 июня - 15 октября<br />
-          Россия
-        </li>
-      </ul>
-    </section>	 	
-    <section class="grid_8">
-      <article id="rubyc" class="slide current">
-        <p><img src="/images/RubyC620х96.jpg" class="banner" /></p>
-        <p>RubyC — это двух-дневное мероприятие по технологии Руби и сопутствующим технологиям веб-разработки. Мероприятие соберет лучших рубистов не только из Украины, но из СНГ и Европы.</p>
-        <p>В этом году на RubyC можно будет увидеть и услышать таких гуру технологии Руби как Стив Клабник, Райан Бигг и Пат Аллан.</p>
-        <ul>
-          <li>5-6 ноября, Киев, Украина.</li>
-          <li>Сайт: <a href="http://rubyc.eu">rubyc.eu</a></li>
-          <li>Твиттер: <a href="http://twitter.com/rubyc_eu">@rubyc_eu</a></li>
-        </ul>
-      </article>
-      <article id="rupy" class="slide" style="display:none">
-        <p><img src="/images/RuPy620x120.png" class="banner" /></p>
-        <p>Конференция RuPy посвященна двум великолепным языкам Ruby и Python. Впервые проведенная конференция в 2007 году собрала большое количество энтузиастов из Польши и других стран.</p>
-        <p>Это будет одна из крупнейших конференций с посещением ~400 человек. Приглашены звезды сообщества: Yehuda Katz, Ezra Zygmuntowicz, Xavier Noria, Obie Fernandez, José Valim.</p>
-        <ul>
-          <li>14-16 октября, Познань, Польша.</li>
-          <li>Сайт: <a href="http://rupy.eu/">rupy.eu</a></li>
-          <li>Твиттер: <a href="http://twitter.com/rupy">@rupy</a></li>
-        </ul>
-      </article>
-      <article id="apps4russia" class="slide" style="display:none">
-        <p><img src="/images/Apps4Russia620x80.gif" class="banner" /></p>
-        <p>Apps4Russia – это конкурс для разработчиков приложений и веб-сайтов по созданию проектов основанных на открытых государственных данных и использованию их для общественной пользы и большей прозрачности государства.</p>
-        <ul>
-          <li>Сайт: <a href="http://www.apps4russia.ru/">www.apps4russia.ru</a></li>
-          <li>Твиттер: <a href="http://twitter.com/apps4russia">@apps4russia</a></li>
-        </ul>
-      </article>
-    </section>	 	
-  </section>  
-<% end %>
-
 <% if !@items.blank? %>
   <% @items.group_by{ |item| item.created_at.to_date }.each do |created_at, items| %>
   <section class="day container_12 clearfix">

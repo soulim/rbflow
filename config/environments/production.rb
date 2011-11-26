@@ -57,4 +57,10 @@ Rbflow::Application.configure do
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
+  
+    # Setup exception notification plugin
+  config.middleware.use ExceptionNotifier,
+    :email_prefix => "[RubyFlow] ",
+    :sender_address => %{"RubyFlow notifier" <notifier@soulim.com>},
+    :exception_recipients => %w{dev@soulim.com}
 end

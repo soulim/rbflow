@@ -7,7 +7,7 @@
     <meta name="author" content="<%= yield(:meta_author).blank? ? t(".meta_author") : yield(:meta_author) %>" />
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="alternate" type="application/rss+xml" title="RubyFlow.ru" href="http://feedproxy.google.com/rubyflowru" />
-    <%= stylesheet_link_tag "reset", "application", "960gs", "form", "icon", "wmd", "code", :cache => true %>
+    <%= stylesheet_link_tag "application" %>
     <%= csrf_meta_tag %>
     <title><%= "#{yield(:title)} &mdash; ".html_safe unless yield(:title).blank? -%><%= t('.title') -%></title>
   </head>
@@ -45,7 +45,7 @@
     <footer id="footer" class="container_12 clearfix">
       <section class="grid_2">
         <p>&copy;&nbsp;2008—2011, <a href="http://soulim.com">Alex Soulim</a></p>
-        <p>При поддержке хостинг-провайдера <a href="http://locum.ru" class="partner"><span>locum.ru</span></a></p>
+        <p>При поддержке хостинг-провайдера <a href="http://locum.ru?code=f07cb8b5a66f6116967a13f8b2818e45fb644306" class="partner"><span>locum.ru</span></a></p>
       </section>
       <section class="grid_8">
         <nav>
@@ -60,7 +60,7 @@
         <a href="http://feeds.feedburner.com/rubyflowru" style="display:inline-block;vertical-align:top;" title="Подпишись на RSS"><img src="http://feeds.feedburner.com/~fc/rubyflowru?bg=eeeeee&amp;fg=444444&amp;anim=0" height="26" width="88" style="border:0" alt="" /></a>
       </section>
     </footer>
-    <%= javascript_include_tag :defaults, "jquery.flash", "highlight.pack", :cache => true %>  
+    <%= javascript_include_tag "application" %>  
     <script type="text/javascript">
       $('pre').each(function(i, e) { hljs.highlightBlock(e, '    ')});
     </script>

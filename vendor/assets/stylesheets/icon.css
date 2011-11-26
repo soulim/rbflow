@@ -3,7 +3,7 @@
   vertical-align:middle;
   width:16px;
   height:16px;
-  background:transparent url(/images/icon-sprite.png) 0 0 no-repeat;
+  background:transparent url(/assets/icon-sprite.png) 0 0 no-repeat;
 }
 .item-edit { background-position:0 0; }
 .item-remove { background-position:-16px 0; }

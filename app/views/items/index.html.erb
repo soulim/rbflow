@@ -6,12 +6,12 @@
       <h2>Интересное событие</h2>
     </section>
     <section class="grid_8">
-      <p><a href="http://railsclub.timepad.ru/event/9778"><img src="/images/railsclub620x80.png" class="banner" /></a></p>
+      <p><a href="http://railsclub.timepad.ru/event/9778"><%= image_tag "railsclub620x80.png", :class => "banner" %></a></p>
       <p>RailsClub — это конференция веб разработчиков на Ruby и Ruby On Rails. Она посвящена всем аспектам веб разработки в целом и разработке на Ruby и Rails в частности.</p>
       <ul>
         <li>17 декабря 2011, Москва, Россия.</li>
-        <li>Сайт: <a href="http://railsclub.ru/">railsclub.ru/</a></li>
-        <li>Твиттер: <a href="http://twitter.com/railsclub">@railsclub</a></li>
+        <li>Сайт: <%= link_to "railsclub.ru", "http://railsclub.ru" %></li>
+        <li>Твиттер: <%= link_to "@railsclub", "http://twitter.com/railsclub" %></li>
       </ul>
     </section>
   </section>

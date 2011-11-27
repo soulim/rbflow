@@ -6,7 +6,6 @@
   <%= f.text_area :markdown, :placeholder => t("activerecord.attributes.item.markdown") %>
 </div>
 <% content_for :footer_js do %>
-  <%= javascript_include_tag("wmd.combined.min") %>
   <script type="text/javascript">
     function updateTitlePreview() {
       $("#title-preview").text($(this).val());

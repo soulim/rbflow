@@ -2,7 +2,6 @@
 <div>
   <%= f.text_area :markdown, :placeholder => t("activerecord.attributes.comment.markdown"), :rows => 10, :autofocus => true %>
 </div>
-<%= javascript_include_tag("wmd.combined.min") %>
 <script type="text/javascript">
   setup_wmd({
     input: "comment_markdown"

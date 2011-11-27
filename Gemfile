@@ -13,6 +13,12 @@ gem "kaminari", "~> 0.12.4"
 gem "thinking-sphinx", "~> 2.0.10"
 gem "backup", "~> 3.0.19"
 
+# Gems used only for assets and not required
+# in production environments by default.
+group :assets do
+  gem "uglifier"
+end
+
 group :development, :test do
   gem "sqlite3", "~> 1.3.4"
   gem "rspec-rails", "~> 2.7.0"

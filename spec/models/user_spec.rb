@@ -6,7 +6,7 @@ describe User do
   describe ".create_with_omniauth!" do
     let(:auth) do
       {
-        "user_info" => {
+        "info" => {
           "name"  => "John Doe",
           "email" => "john.doe@example.com",
           "image" => "http://example.com/images/avatar.png"
@@ -16,15 +16,15 @@ describe User do
     subject { User.create_with_omniauth!(auth) }
     
     it "creates a new user with given name" do
-      subject.name.should == auth["user_info"]["name"]
+      subject.name.should == auth["info"]["name"]
     end
     
     it "creates a new user with given email" do
-      subject.email.should == auth["user_info"]["email"]
+      subject.email.should == auth["info"]["email"]
     end
     
     it "creates a new user with given avatar's URL" do
-      subject.avatar_url.should == auth["user_info"]["image"]
+      subject.avatar_url.should == auth["info"]["image"]
     end
   end
   

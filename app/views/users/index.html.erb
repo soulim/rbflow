@@ -8,7 +8,7 @@
       <td width="10%" style="text-align:center"><%= image_tag avatar_url(user), :size => "48x48", :alt => user.name, :class => "avatar" %></td>
       <td width="60%">
         <%= user.name %><br />
-        <%= auto_link(user.email).html_safe %>
+        <%= mail_to user.email, nil, :encode => "hex" %>
       </td>
       <td width="30%" style="text-align:right">
         <%= (user.approved?) ? link_to(t(".unapprove"), unapprove_user_url(user), :method => :put, :class => "small button") : link_to(t(".approve"), approve_user_url(user), :method => :put, :class => "small button") %>

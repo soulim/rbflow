@@ -13,9 +13,9 @@ class User < ActiveRecord::Base
   
   def self.create_with_omniauth!(auth)
     self.create! do |user|
-      user.name       = auth["user_info"]["name"]
-      user.email      = auth["user_info"]["email"]
-      user.avatar_url = auth["user_info"]["image"]
+      user.name       = auth["info"]["name"]
+      user.email      = auth["info"]["email"]
+      user.avatar_url = auth["info"]["image"]
     end
   end
   

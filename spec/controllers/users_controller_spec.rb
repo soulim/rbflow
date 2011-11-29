@@ -7,7 +7,7 @@ describe UsersController do
   
   describe "GET index" do
     it "assigns @users" do
-      User.stub_chain(:order, :paginate).and_return([user])
+      User.stub_chain(:order, :page, :per).and_return([user])
       get :index
       assigns[:users].should eq([user])
     end

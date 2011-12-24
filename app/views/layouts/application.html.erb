@@ -27,8 +27,13 @@
           <ul>
             <li><%= link_to t(".new_item"), new_item_url %></li>
             <li><%= link_to t(".vacancies"), "http://rubyjobs.ru" %></li>
+            <li>
+              <a href="https://twitter.com/rubyflowru" class="twitter-follow-button" data-show-count="false" data-lang="ru" data-show-screen-name="false" data-width="65px">Читать @rubyflowru</a>
+              <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            </li>
+            <li><%= link_to image_tag("feed.png", :size => "16x16"), "http://feeds.feedburner.com/rubyflowru" %></li>
           </ul>
-        </nav>          
+        </nav>
       </section>
       <section class="search form grid_2">
         <%= form_tag searches_url, :method => :get do %>
@@ -55,8 +60,9 @@
           </ul>
         </nav>          
       </section>
-      <section class="grid_2">
-        <a href="http://www.twitter.com/rubyflowru" style="display:inline-block;margin-right:1em;vertical-align:top;" title="Следуй за @rubyflowru на Twitter"><img src="http://twitter-badges.s3.amazonaws.com/t_small-b.png" alt="Следуй за @rubyflowru на Twitter"/></a>
+      <section class="grid_2 counters">
+        <a href="https://twitter.com/rubyflowru" class="twitter-follow-button" data-show-count="false" data-lang="ru" data-show-screen-name="false" data-width="65px">Читать @rubyflowru</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
         <a href="http://feeds.feedburner.com/rubyflowru" style="display:inline-block;vertical-align:top;" title="Подпишись на RSS"><img src="http://feeds.feedburner.com/~fc/rubyflowru?bg=eeeeee&amp;fg=444444&amp;anim=0" height="26" width="88" style="border:0" alt="" /></a>
       </section>
     </footer>

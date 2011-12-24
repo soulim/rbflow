@@ -205,8 +205,11 @@ a:hover {
   padding-top:1px;
 } 
 #header .menu nav ul li {
-  display:inline;
-} 
+  display:inline-block;
+  vertical-align:middle;
+  padding:0 6px;
+  line-height:1;
+}
 #header .menu nav a {
   display:inline-block;
   margin:0;
@@ -217,7 +220,7 @@ a:hover {
 }
 #header .menu nav a:hover {
   color:#FFF;
-  background-color:#CF3C25;  
+  background-color:#CF3C25;
 }
 
 #content {
@@ -474,7 +477,6 @@ article .comments .comment {
   font-size:22px;
 }
 
-
 #footer {
   margin-top:100px;
   color:#444;
@@ -485,6 +487,9 @@ article .comments .comment {
 }
 #footer .partner {
   text-decoration:none;
+}
+#footer .counters {
+  text-align:center;
 }
 #footer p {
   margin-bottom:10px;
@@ -505,7 +510,5 @@ article .comments .comment {
   display:inline;
   margin-left:2em;
 } 
-#footer nav a {
-}
-#footer nav a:hover {
-}
+#footer nav a {}
+#footer nav a:hover {}

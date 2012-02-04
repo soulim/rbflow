@@ -49,7 +49,7 @@
     </section>
     <footer id="footer" class="container_12 clearfix">
       <section class="grid_2">
-        <p>&copy;&nbsp;2008—2012, <a href="http://soulim.com">Alex Soulim</a></p>
+        <p>&copy;&nbsp;2008<%= "—#{Time.now.year.to_s}" if Time.now.year.to_i > 2008 %>, <a href="http://soulim.com">Alex Soulim</a></p>
         <p>При поддержке хостинг-провайдера <a href="http://locum.ru?code=f07cb8b5a66f6116967a13f8b2818e45fb644306" class="partner"><span>locum.ru</span></a></p>
       </section>
       <section class="grid_8">

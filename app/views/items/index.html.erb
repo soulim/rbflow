@@ -1,23 +1,5 @@
 <% content_for :title, t(".title") %>
 
-<% if params[:page].blank? %>	 	
-  <section class="event container_12 clearfix">
-    <section class="grid_2">
-      <h2>Интересное событие</h2>
-    </section>
-    <section class="grid_8">
-      <p><%= link_to image_tag("toaster620x90.jpg", :size => "620x90"), "http://toster.ru/" %></p>
-      <p><strong>.тостер {ruby}</strong> &mdash; это техническая конференция. Главная цель &mdash; дать профессионалам возможность поделиться своими знаниями.</p>
-      <ul>
-        <li>10 февраля 2012, Москва, Digital October.</li>
-        <li>Сайт: <%= link_to "toster.ru", "http://toster.ru/" %></li>
-        <li>Твиттер: <%= link_to "@toster_ru", "http://twitter.com/toster_ru/" %></li>
-      </ul>
-      <p><strong>Скидка 10%</strong> при покупке билета, если используете код <strong>rubyflow</strong></p>
-    </section>
-  </section>
-<% end %>
-
 <% if !@items.blank? %>
   <% @items.group_by{ |item| item.created_at.to_date }.each do |created_at, items| %>
   <section class="day container_12 clearfix">

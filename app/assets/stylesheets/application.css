@@ -34,7 +34,7 @@ article header a {
   text-decoration:none;  
 }
 strong {
-	font-weight:bold;
+  font-weight:bold;
 }
 p,
 pre,
@@ -98,22 +98,22 @@ a:hover {
    = Flash message
    ------------------------------------------------------------------------ */
 .flash {
-	position:fixed;
-	top:0;
-	left:0;
-	width:100%;
-	z-index: 10000;
-	border-bottom:2px solid rgba(0, 0, 0, 0.05);
-	background-color:rgba(46, 46, 46, 0.95);
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index: 10000;
+  border-bottom:2px solid rgba(0, 0, 0, 0.05);
+  background-color:rgba(46, 46, 46, 0.95);
 }
 .flash .notice,
 .flash .error {
-	margin:0 7%;
-	padding:15px;
-	font-size:14px;
-	font-weight:bold;
-	text-align:center;
-	color:#FFF;
+  margin:0 7%;
+  padding:15px;
+  font-size:14px;
+  font-weight:bold;
+  text-align:center;
+  color:#FFF;
 }
 .flash .error { color:#CF3C25; }
 
@@ -347,7 +347,9 @@ article aside ul li {
   list-style:none outside none;
   line-height:1;
 }
-
+article img {
+  max-width:620px;
+}
 article .comments {
   font-style:italic;
 }

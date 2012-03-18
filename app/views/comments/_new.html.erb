@@ -5,7 +5,7 @@
   <%= form_for [item, comment], :remote => true do |f| %>
     <%= render :partial => "comments/form", :locals => { :f => f } %>
     <div class="buttons">
-      <%= f.submit t(".create") %>
+      <%= f.submit t(".create"), :disable_with => t(".processing") %>
     </div>
   <% end %>
 </section>

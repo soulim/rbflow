@@ -7,12 +7,14 @@ ru:
       title: "Новая статья"
       create: "Опубликовать"
       cancel: "Отмена"
+      processing: "Сохранение..."
     create:
       successful: "Статья добавлена"
     edit:
       title: "Редактирование статьи"
       update: "Обновить"
       cancel: "Отмена"
+      processing: "Сохранение..."
     update:
       successful: "Статья обновлена"
     show:

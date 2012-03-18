@@ -7,7 +7,8 @@
   <%= form_for @item do |f| %>
     <%= render :partial => "form", :locals => { :f => f } %>
     <div class="buttons">
-      <%= f.submit t(".update") %> <%= link_to t(".cancel"), :back %>
+      <%= f.submit t(".update"), :disable_with => t(".processing") %>
+      <%= link_to t(".cancel"), :back %>
     </div>
   <% end %>
 </section>

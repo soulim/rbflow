@@ -1,5 +1,27 @@
 <% content_for :title, t(".title") %>
 
+
+<% if params[:page].blank? %>
+  <section class="event container_12 clearfix">
+    <section class="grid_2">
+      <h2>Интересное событие</h2>
+    </section>
+    <section class="grid_8">
+      <p><%= link_to image_tag('devconf240x55.png', :size => '240x55'), 'http://devconf.ru/' %></p>
+      <p>
+        DevConf&nbsp;&mdash; профессиональная конференция, посвященная ведущим
+        технологиям программирования и веб-разработки.
+        В рамках DevConf 2012 пройдут 5 конференций и ряд уникальных
+        мастер-классов.
+      </p>
+      <ul>
+        <li>9 июня 2012, Москва</li>
+        <li>Сайт: <%= link_to 'devconf.ru', 'http://devconf.ru/' %>, Twitter: <%= link_to "@devconf_ru", "https://twitter.com/devconf_ru" %></li>
+      </ul>
+    </section>
+  </section>
+<% end %>
+
 <% if !@items.blank? %>
   <% @items.group_by{ |item| item.created_at.to_date }.each do |created_at, items| %>
   <section class="day container_12 clearfix">

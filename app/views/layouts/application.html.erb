@@ -52,7 +52,14 @@
         <p>&copy;&nbsp;<%= years_tag %>, <a href="http://soulim.com">Alex Soulim</a></p>
         <p>При поддержке хостинг-провайдера <a href="http://locum.ru?code=f07cb8b5a66f6116967a13f8b2818e45fb644306" class="partner"><span>locum.ru</span></a></p>
       </section>
-      <section class="grid_8">
+      <section class="grid_4">
+        <p>
+          <%= link_to image_tag('travis-ci50x50.png', :size => '50x50'), 'http://travis-ci.org/', :style => 'float:left;margin-right:10px;' %>
+          Travis CI&nbsp;&mdash; простой и мощный сервис непрерывной интеграции для ваших проектов с открытым кодом.
+          <%= link_to 'http://travis-ci.org', 'http://travis-ci.org' %>
+        </p>
+      </section>
+      <section class="grid_4">
         <nav>
           <ul>
             <li><%= link_to t(".about"), page_url(:id => "about") %></li>

@@ -1,5 +1,25 @@
 <% content_for :title, t(".title") %>
 
+<% if params[:page].blank? %>
+  <section class="event container_12 clearfix">
+    <section class="grid_2">
+      <h2>Интересное событие</h2>
+    </section>
+    <section class="grid_2">
+    <%= link_to image_tag('rubyosc128x128.png', :size => '128x128'), 'http://rubyosc.com/' %>
+    </section>
+    <section class="grid_6">
+      <p>
+        <strong>Ruby OpenSource Challenge</strong>&nbsp;&mdash; возможность помочь проекту с открытым кодом, проявить и улучшить свои профессиональные навыки, получив в награду классные призы.
+      </p>
+      <ul>
+        <li>1-31 июля 2012</li>
+        <li>Сайт: <%= link_to 'rubyosc.com', 'http://rubyosc.com/' %>, Twitter: <%= link_to "@RubyOSC", "https://twitter.com/RubyOSC" %></li>
+      </ul>
+    </section>
+  </section>
+<% end %>
+
 <% if !@items.blank? %>
   <% @items.group_by{ |item| item.created_at.to_date }.each do |created_at, items| %>
   <section class="day container_12 clearfix">

@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe User do
-  subject { Factory.build(:user) }
+  subject { FactoryGirl.build(:user) }
   
   describe ".create_with_omniauth!" do
     let(:auth) do
@@ -103,7 +103,7 @@ describe User do
     end
     context "when given user is not the same person" do
       it "returns false" do
-        subject.me?(Factory(:user)).should be_false
+        subject.me?(FactoryGirl.create(:user)).should be_false
       end
     end
   end

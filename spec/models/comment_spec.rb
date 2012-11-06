@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Comment do
-  subject { Factory.build(:comment) }
+  subject { FactoryGirl.build(:comment) }
   
   it "is valid with valid attributes" do
     subject.should be_valid

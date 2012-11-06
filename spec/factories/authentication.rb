@@ -1,5 +1,7 @@
-Factory.define :authentication do |f|
-  f.sequence(:uid) { |n| "foo-#{n}" }
-  f.provider    "foo"
-  f.association :user
+FactoryGirl.define do
+  factory :authentication do
+    user
+    sequence(:uid) { |n| "foo-#{n}" }
+    provider    "foo"
+  end
 end

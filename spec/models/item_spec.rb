@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Item do
-  subject { Factory.build(:item) }
+  subject { FactoryGirl.build(:item) }
   
   it "is valid with valid attributes" do
     subject.should be_valid
@@ -42,7 +42,7 @@ describe Item do
     end
     context "when given user is not author of item" do
       it "returns false" do
-        subject.author?(Factory(:user)).should be_false
+        subject.author?(FactoryGirl.create(:user)).should be_false
       end
     end
   end

@@ -13,6 +13,7 @@ config/omniauth.yml
 config/mail.yml
 config/backup.yml
 config/sphinx.yml
+config/newrelic.yml
 config/deploy.rb
 config/deploy
 config/*.sphinx.conf

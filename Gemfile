@@ -28,4 +28,5 @@ end
 group :production do
   gem "mysql2", "~> 0.3.11"
   gem "exception_notification", "~> 3.0.0"
+  gem "newrelic_rpm"
 end

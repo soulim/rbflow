@@ -1,23 +1,5 @@
 <% content_for :title, t(".title") %>
 
-<% if params[:page].blank? %>
-  <section class="event container_12 clearfix">
-    <section class="grid_2">&nbsp;</section>
-    <section class="grid_2">
-    <%= link_to image_tag('railsclub128x92.png', :size => '128x92'), 'http://railsclub.ru/' %>
-    </section>
-    <section class="grid_6">
-      <p>
-        <strong>RailsClub’Ulyanovsk 2012</strong> продлится два дня, соберет вместе ведущих российских разработчиков и пройдет в формате "рубисты не только о руби".
-      </p>
-      <ul>
-        <li>15-16 декабря 2012, г. Ульяновск, "Дворец Творчества"</li>
-        <li><%= link_to 'Официальная страница', 'http://railsclub.ru/' %></li>
-      </ul>
-    </section>
-  </section>
-<% end %>
-
 <% if !@items.blank? %>
   <% @items.group_by{ |item| item.created_at.to_date }.each do |created_at, items| %>
   <section class="day container_12 clearfix">

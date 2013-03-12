@@ -1,32 +1,34 @@
-source "http://rubygems.org"
+source "https://rubygems.org"
 
-gem "rails", "~> 3.2.11"
+gem "rails", "~> 3.2.12"
 
-gem "jquery-rails", "~> 2.1.4"
-gem "omniauth", "~> 1.1.1"
+gem "jquery-rails", "~> 2.2.1"
+gem "omniauth", "~> 1.1.3"
 gem "omniauth-openid", "~> 1.0.1"
 gem "omniauth-twitter", "~> 0.0.14"
-gem "omniauth-github", "~> 1.0.3"
-gem "cancan", "~> 1.6.7"
-gem "rdiscount", "~> 1.6.8"
+gem "omniauth-github", "~> 1.1.0"
+gem "cancan", "~> 1.6.9"
+gem "rdiscount", "~> 2.0.7.1"
 gem "kaminari", "~> 0.14.1"
-gem "thinking-sphinx", "~> 2.0.13"
+gem "thinking-sphinx", "~> 3.0.1"
+gem "mysql2", "~> 0.3.11" # thinking-sphinx requires this gem
 
 group :assets do
   gem "uglifier", "~> 1.3.0"
 end
 
 group :development, :test do
-  gem "sqlite3", "~> 1.3.6"
-  gem "rspec-rails", "~> 2.12.1"
+  gem "sqlite3", "~> 1.3.7"
+  gem "rspec-rails", "~> 2.13.0"
+  gem "mina", "~> 0.2.1"
 end
 
 group :test do
-  gem "factory_girl_rails", "~> 4.1.0"
+  gem "factory_girl_rails", "~> 4.2.1"
 end
 
 group :production do
-  gem "mysql2", "~> 0.3.11"
-  gem "exception_notification", "~> 3.0.0"
-  gem "newrelic_rpm"
+  gem "pg", "~> 0.14.1"
+  gem "bugsnag", "~> 1.2.18"
+  gem "newrelic_rpm", "~> 3.5.8.72"
 end

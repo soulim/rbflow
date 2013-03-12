@@ -1,6 +1,0 @@
-production:
-  config_file: "/var/www/rails_apps/rubyflow.ru/shared/config/production.sphinx.conf"
-  searchd_log_file: "/var/www/rails_apps/rubyflow.ru/shared/log/searchd.log"
-  query_log_file: "/var/www/rails_apps/rubyflow.ru/shared/log/searchd.query.log"
-  pid_file: "/var/www/rails_apps/rubyflow.ru/shared/log/searchd.production.pid"
-  searchd_file_path: "/var/www/rails_apps/rubyflow.ru/shared/db/sphinx"

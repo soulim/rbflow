@@ -12,6 +12,8 @@ gem "rdiscount", "~> 2.0.7.1"
 gem "kaminari", "~> 0.14.1"
 gem "thinking-sphinx", "~> 3.0.1"
 gem "mysql2", "~> 0.3.11" # thinking-sphinx requires this gem
+gem "foreman", "~> 0.62.0"
+gem "unicorn", "~> 4.6.2"
 
 group :assets do
   gem "uglifier", "~> 1.3.0"

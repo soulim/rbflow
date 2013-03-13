@@ -14,6 +14,7 @@ gem "thinking-sphinx", "~> 3.0.1"
 gem "mysql2", "~> 0.3.12b6" # thinking-sphinx requires this gem
 gem "foreman", "~> 0.62.0"
 gem "unicorn", "~> 4.6.2"
+gem "bugsnag", "~> 1.2.18"
 
 group :assets do
   gem "uglifier", "~> 1.3.0"
@@ -31,6 +32,5 @@ end
 
 group :production do
   gem "pg", "~> 0.14.1"
-  gem "bugsnag", "~> 1.2.18"
   gem "newrelic_rpm", "~> 3.5.8.72"
 end

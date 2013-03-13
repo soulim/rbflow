@@ -12,6 +12,7 @@ config/database.yml
 config/omniauth.yml
 config/mail.yml
 config/newrelic.yml
+config/thinking_sphinx.yml
 config/deploy.rb
 config/deploy
 config/*.sphinx.conf

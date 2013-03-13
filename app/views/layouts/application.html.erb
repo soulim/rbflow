@@ -43,14 +43,13 @@
       <section class="account">
         <%= signed_in? ? link_to(t(".account"), user_url(current_user)) : link_to(t(".sign_in"), sign_in_url) %>
       </section>
-    </header>    
+    </header>
     <section id="content" class="content container_12 clearfix">
       <%= yield %>
     </section>
     <footer id="footer" class="container_12 clearfix">
       <section class="grid_2">
         <p>&copy;&nbsp;<%= years_tag %>, <a href="http://soulim.com">Alex Soulim</a></p>
-        <p>При поддержке хостинг-провайдера <a href="http://locum.ru?code=f07cb8b5a66f6116967a13f8b2818e45fb644306" class="partner"><span>locum.ru</span></a></p>
       </section>
       <section class="grid_4">
         <p>
@@ -65,7 +64,7 @@
             <li><%= link_to t(".about"), page_url(:id => "about") %></li>
             <li><%= link_to t(".contacts"), page_url(:id => "contacts") %></li>
           </ul>
-        </nav>          
+        </nav>
       </section>
       <section class="grid_2 counters">
         <a href="https://twitter.com/rubyflowru" class="twitter-follow-button" data-show-count="false" data-lang="ru" data-show-screen-name="false" data-width="65px">Читать @rubyflowru</a>
@@ -73,7 +72,7 @@
         <a href="http://feeds.feedburner.com/rubyflowru" style="display:inline-block;vertical-align:top;" title="Подпишись на RSS"><img src="http://feeds.feedburner.com/~fc/rubyflowru?bg=eeeeee&amp;fg=444444&amp;anim=0" height="26" width="88" style="border:0" alt="" /></a>
       </section>
     </footer>
-    <%= javascript_include_tag "application" %>  
+    <%= javascript_include_tag "application" %>
     <script type="text/javascript">
       $('pre').each(function(i, e) { hljs.highlightBlock(e, '    ')});
     </script>

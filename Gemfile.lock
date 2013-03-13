@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/nadarei/mina.git
+  revision: 6939c3e4cf138ec0b06d403fff254a44468c5537
+  specs:
+    mina (0.2.1)
+      open4
+      rake
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -72,9 +80,6 @@ GEM
       treetop (~> 1.4.8)
     middleware (0.1.0)
     mime-types (1.21)
-    mina (0.2.1)
-      open4
-      rake
     multi_json (1.6.1)
     multi_xml (0.5.3)
     multipart-post (1.2.0)
@@ -187,7 +192,7 @@ DEPENDENCIES
   foreman (~> 0.62.0)
   jquery-rails (~> 2.2.1)
   kaminari (~> 0.14.1)
-  mina (~> 0.2.1)
+  mina!
   mysql2 (~> 0.3.12b6)
   newrelic_rpm (~> 3.5.8.72)
   omniauth (~> 1.1.3)

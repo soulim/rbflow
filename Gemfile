@@ -23,7 +23,7 @@ end
 group :development, :test do
   gem "sqlite3", "~> 1.3.7"
   gem "rspec-rails", "~> 2.13.0"
-  gem "mina", "~> 0.2.1"
+  gem "mina", :git => "git://github.com/nadarei/mina.git"
 end
 
 group :test do

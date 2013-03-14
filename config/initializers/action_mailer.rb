@@ -1,5 +1,7 @@
-# ActionMailer setup
-config = YAML.load_file(File.join(Rails.root, "config", "mail.yml"))[Rails.env].symbolize_keys
-
-ActionMailer::Base.smtp_settings              = config[:smtp_settings].symbolize_keys
-ActionMailer::Base.default_url_options[:host] = config[:host]
+ActionMailer::Base.smtp_settings = {
+  :address => ENV['SMTP_ADDRESS'],
+  :port => ENV['SMTP_PORT'],
+  :user_name => ENV['SMTP_USERNAME'],
+  :password => ENV['SMTP_PASSWORD']
+}
+ActionMailer::Base.default_url_options[:host] = ENV['SMTP_HOST']

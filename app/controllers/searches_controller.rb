@@ -1,8 +1,9 @@
 class SearchesController < ApplicationController
   respond_to :html
-  
+
   def index
-    respond_with @items = Item.search(params[:q], :page => params[:page], :per_page => 20)
+    @search = Search.new(Item)
+    respond_with @items = @search.perform(params[:q]).page(params[:page]).per(20)
   end
 
 end

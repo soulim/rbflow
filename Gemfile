@@ -10,8 +10,8 @@ gem "omniauth-github", "~> 1.1.0"
 gem "cancan", "~> 1.6.9"
 gem "rdiscount", "~> 2.0.7.1"
 gem "kaminari", "~> 0.14.1"
-gem "thinking-sphinx", "~> 3.0.1"
-gem "mysql2", "~> 0.3.12b6" # thinking-sphinx requires this gem
+gem "pg", "~> 0.14.1"
+gem "textacular", "~> 3.0.0", require: "textacular/rails"
 gem "foreman", "~> 0.62.0"
 gem "unicorn", "~> 4.6.2"
 gem "bugsnag", "~> 1.2.18"
@@ -23,7 +23,6 @@ group :assets do
 end
 
 group :development, :test do
-  gem "sqlite3", "~> 1.3.7"
   gem "rspec-rails", "~> 2.13.0"
   gem "mina", :git => "git://github.com/nadarei/mina.git"
 end
@@ -33,6 +32,5 @@ group :test do
 end
 
 group :production do
-  gem "pg", "~> 0.14.1"
   gem "newrelic_rpm", "~> 3.5.8.72"
 end

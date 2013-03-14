@@ -16,3 +16,6 @@ config/thinking_sphinx.yml
 config/deploy.rb
 config/deploy
 config/*.sphinx.conf
+
+# Ignore application configuration
+/config/application.yml

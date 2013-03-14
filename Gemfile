@@ -15,6 +15,7 @@ gem "mysql2", "~> 0.3.12b6" # thinking-sphinx requires this gem
 gem "foreman", "~> 0.62.0"
 gem "unicorn", "~> 4.6.2"
 gem "bugsnag", "~> 1.2.18"
+gem "figaro", "~> 0.6.3"
 
 group :assets do
   gem "therubyracer", "~> 0.11.4"

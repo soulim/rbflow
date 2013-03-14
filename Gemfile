@@ -17,6 +17,7 @@ gem "unicorn", "~> 4.6.2"
 gem "bugsnag", "~> 1.2.18"
 
 group :assets do
+  gem "therubyracer", "~> 0.11.4"
   gem "uglifier", "~> 1.3.0"
 end
 

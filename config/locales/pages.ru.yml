@@ -5,23 +5,18 @@ ru:
         title: "Коллективный блог сообщества разработчиков"
         markdown: |
           На этом сайте публикуются статьи о языке Ruby и всем, что с ним связано.
-          
+
           Концепцию RubyFlow создал Питер Купер ([Peter Cooper](http://peterc.org)), автор [Ruby Inside](http://www.rubyinside.com). Опубликованные материлы можно читать непосредственно на сайте, а также через [RSS](http://feedproxy.google.com/rubyflowru) или  [Twitter](http://twitter.com/rubyflowru). Но в последние два источника статьи попадают только от проверенных временем авторов.
-          
+
           Проект в эфире уже третий год и собрал более 1 000 статей.
-          
+
           Данная версия RubyFlow.ru является проектом с открытым исходным кодом, который всегда можно найти на GitHub -- [github.com/soulim/rbflow](https://github.com/soulim/rbflow).
-      contacts:
-        title: "Контактная информация"
-        markdown: |
+
           Если у вас возникли вопросы, появились идеи или есть интересные предложения, то смело пишите. Постараюсь ответить в тот же день.
-          
-          Электронная почта: [soulim@gmail.com](mailto:soulim@gmail.com)  
+
+          Электронная почта: [soulim@gmail.com](mailto:soulim@gmail.com)
           Твиттер: [@rubyflowru](http://twitter.com/rubyflowru)
-          
-          
-          *Александр Сулим,  
+
+
+          *Александр Сулим,
           основатель и ведущий разработчик*
-      terms:
-        title: "Условия сервиса"
-        markdown: ""

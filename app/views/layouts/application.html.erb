@@ -49,11 +49,12 @@
           <ul>
             <li><%= link_to t(".new_item"), new_item_url %></li>
             <li><%= link_to t(".vacancies"), "http://rubyjobs.ru" %></li>
+            <li><%= link_to t(".about"), page_url(:id => "about") %></li>
+            <li><%= link_to image_tag("feed.png", :size => "16x16"), "http://feeds.feedburner.com/rubyflowru" %></li>
             <li>
               <a href="https://twitter.com/rubyflowru" class="twitter-follow-button" data-show-count="false" data-lang="ru" data-show-screen-name="false" data-width="65px">Читать @rubyflowru</a>
               <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
             </li>
-            <li><%= link_to image_tag("feed.png", :size => "16x16"), "http://feeds.feedburner.com/rubyflowru" %></li>
           </ul>
         </nav>
       </section>
@@ -71,7 +72,15 @@
     </section>
     <footer id="footer" class="container_12 clearfix">
       <section class="grid_2">
-        <p>&copy;&nbsp;<%= years_tag %>, <a href="http://soulim.com">Alex Soulim</a></p>
+        <p>
+          &copy;&nbsp;<%= years_tag %><br>
+          <a href="http://soulim.com">Alex Soulim</a>
+        </p>
+      </section>
+      <section class="grid_4">
+        <p>
+          <%= link_to image_tag('digitalocean-badge-gray.png', :size => '140x39'), 'http://www.digitalocean.com' %>
+        </p>
       </section>
       <section class="grid_4">
         <p>
@@ -79,18 +88,14 @@
           Travis CI&nbsp;&mdash; простой и мощный сервис непрерывной интеграции для ваших проектов с открытым кодом.
           <%= link_to 'http://travis-ci.org', 'http://travis-ci.org' %>
         </p>
-      </section>
-      <section class="grid_4">
-        <nav>
+        <!-- nav>
           <ul>
             <li><%= link_to t(".about"), page_url(:id => "about") %></li>
             <li><%= link_to t(".contacts"), page_url(:id => "contacts") %></li>
           </ul>
-        </nav>
+        </nav -->
       </section>
       <section class="grid_2 counters">
-        <a href="https://twitter.com/rubyflowru" class="twitter-follow-button" data-show-count="false" data-lang="ru" data-show-screen-name="false" data-width="65px">Читать @rubyflowru</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
         <a href="http://feeds.feedburner.com/rubyflowru" style="display:inline-block;vertical-align:top;" title="Подпишись на RSS"><img src="http://feeds.feedburner.com/~fc/rubyflowru?bg=eeeeee&amp;fg=444444&amp;anim=0" height="26" width="88" style="border:0" alt="" /></a>
       </section>
     </footer>

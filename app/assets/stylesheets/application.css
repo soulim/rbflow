@@ -24,14 +24,14 @@ h1 {
   font-weight:bold;
 }
 h2 {
-  font-size:14px;  
+  font-size:14px;
   font-weight:bold;
   margin-bottom:1em;
 }
 h1, h2, h3, h4, p { word-wrap:break-word; }
 article header a {
   color:#444;
-  text-decoration:none;  
+  text-decoration:none;
 }
 strong {
   font-weight:bold;
@@ -203,7 +203,7 @@ a:hover {
 }
 #header .menu nav ul {
   padding-top:1px;
-} 
+}
 #header .menu nav ul li {
   display:inline-block;
   vertical-align:middle;
@@ -305,7 +305,7 @@ time .date-day {
   font-size:30px;
 }
 time .date-month {
-  font-size:14px;  
+  font-size:14px;
 }
 time .date-year {
   display:block;
@@ -339,7 +339,7 @@ article aside {
   display:none;
 }
 article:hover aside {
-  display:block;  
+  display:block;
 }
 article aside ul li {
   margin:0 0 2px 0;
@@ -383,7 +383,7 @@ article .comments .comment {
   border-radius:4px;
   color:#B2B2B2;
   -background-color:#758EA2;
-  background-color:rgba(243, 246, 250, 1); 
+  background-color:rgba(243, 246, 250, 1);
   font-weight:normal;
   font-size:11px;
   line-height:1;
@@ -429,7 +429,7 @@ article .comments .comment {
 }
 .users td {
   margin:0;
-  padding:3px;  
+  padding:3px;
 }
 
 .admin-buttons {
@@ -481,6 +481,7 @@ article .comments .comment {
 
 #footer {
   margin-top:100px;
+  margin-bottom:30px;
   color:#444;
   font-size:11px;
 }
@@ -507,10 +508,10 @@ article .comments .comment {
   text-align:right;
   text-transform:uppercase;
   font-size:9px;
-} 
+}
 #footer nav ul li {
   display:inline;
   margin-left:2em;
-} 
+}
 #footer nav a {}
 #footer nav a:hover {}

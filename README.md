@@ -12,4 +12,4 @@ RbFlow is community blog engine which works behind rubyflow.ru
 
 See the file LICENSE
 
-Copyright (c) 2010-2012, Alex Soulim
+Copyright (c) 2010-2016, Alexander Sulim

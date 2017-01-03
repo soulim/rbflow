@@ -18,7 +18,7 @@ gem "bugsnag", "~> 1.3.6"
 gem "figaro", "~> 0.6.4"
 
 group :assets do
-  gem "therubyracer", "~> 0.11.4"
+  gem "therubyracer", "~> 0.12.2"
   gem "uglifier", "~> 2.0.1"
 end
 
